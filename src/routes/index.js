@@ -37,6 +37,7 @@ const BottomTabNavigator = () => {
         inactiveTintColor: '#fff',
         showLabel: false,
         tabStyle: { backgroundColor: '#444444' },
+        style: { borderTopWidth: 0 },
       }}
     >
       <Tab.Screen name="Timeline" component={Timeline} />
