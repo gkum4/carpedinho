@@ -1,6 +1,6 @@
 # Carpedinho
 
-Projeto desenvolvido para o Hack Pelo Futuro, cujo tema é Saúde Mental.
+Projeto React Native desenvolvido para o Hack Pelo Futuro, cujo tema é Saúde Mental.
 
 
 Para rodar o projeto em sua máquina: 
