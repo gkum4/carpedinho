@@ -6,7 +6,7 @@ Projeto React Native desenvolvido para o Hack Pelo Futuro, cujo tema é Saúde M
 Para rodar o projeto em sua máquina: 
 
 ```sh
-$ yarn install
+$ yarn add
 ```
 
 Caso você esteja no Windows:
