@@ -6,7 +6,7 @@ Projeto React Native desenvolvido para o Hack Pelo Futuro, cujo tema é Saúde M
 ## Para instalar os pacotes em sua máquina: 
 ### yarn
 ```sh
-$ yarn add
+$ yarn
 ```
 ### npm
 ```sh
