@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     padding: 15,
+    paddingBottom: 0,
   },
   topContainer: {
     flexDirection: 'row',
@@ -47,44 +48,71 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 17,
   },
-  listItemContainer: {
+  notesListItemContainer: {
     height: 120,
     backgroundColor: '#fff',
     padding: 10,
     flexDirection: 'column',
     marginBottom: 10,
   },
-  listItemTopContainer: {
+  notesListItemTopContainer: {
     flexDirection: 'row',
     marginBottom: 5,
   },
-  listItemTopLeftContainer: {
+  notesListItemTopLeftContainer: {
     flex: 1,
   },
-  listeItemTopText: {
+  notesListItemTopText: {
     fontSize: 22,
     fontWeight: 'bold',
   },
-  listItemTopRightContainer: {
+  notesListItemTopRightContainer: {
     width: 40,
     flexDirection: 'row-reverse',
     alignItems: 'center',
   },
-  listItemBottomContainer: {
+  notesListItemBottomContainer: {
     flexDirection: 'row',
     flex: 1,
   },
-  listItemBottomLeftContainer: {
+  notesListItemBottomLeftContainer: {
     flex: 1,
   },
-  listItemBottomRightContainer: {
+  notesListItemBottomRightContainer: {
     width: 30,
     flexDirection: 'row-reverse',
     alignItems: 'flex-end',
   },
-  listItemNoteText: {
+  notesListItemNoteText: {
     fontSize: 15,
   },
+  activitiesContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    marginBottom: 15,
+  },
+  activitiesTitleContainer: {
+    marginBottom: 15,
+  },
+  activitiesTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+  },
+  activitiesListItemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  activitiesListItemText: {
+    fontSize: 17,
+  },
+  activitiesListItemTrashContainer: {
+    flex: 1,
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+  }
 })
 
 export default styles

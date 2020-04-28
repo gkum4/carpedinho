@@ -1,70 +1,94 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import {
-  View,
-  Text,
-  ImageBackground,
-  FlatList,
-  TouchableOpacity,
-} from 'react-native'
+import { View, Text, ImageBackground, FlatList, TouchableOpacity } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import backgroundImage from '../../assets/backgroundImage.png'
+import backgroundImage from '../../assets/backgroundImage.png';
 
-import styles from './styles'
+import styles from './styles';
 
-import { daysData } from '../../data'
+import { daysData } from '../../data';
 
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 
 const Day = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
-  const [sectionPressed, setSectionPressed] = useState('notas')
+  const [sectionPressed, setSectionPressed] = useState('notas');
 
-  const daySelected = '11 de Abril'
+  const daySelected = '11 de Abril';
 
   const Content = () => {
-    if (sectionPressed === 'notas') {
+    const data = daysData.find((item) => item.date === daySelected);
+    if(sectionPressed === 'notas') {
       return (
         <FlatList
-          data={daysData.find(item => item.date === daySelected).notes}
-          keyExtractor={item => item.id}
+          data={data.notes}
+          keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.listItemContainer}>
-              <View style={styles.listItemTopContainer}>
-                <View style={styles.listItemTopLeftContainer}>
-                  <Text style={styles.listeItemTopText}>{item.title}</Text>
+            <TouchableOpacity style={styles.notesListItemContainer}>
+              <View style={styles.notesListItemTopContainer}>
+                <View style={styles.notesListItemTopLeftContainer}>
+                  <Text style={styles.notesListItemTopText}>
+                    {item.title}
+                  </Text>
                 </View>
-                <View style={styles.listItemTopRightContainer}>
-                  <Icon name="trash-o" size={20} style={{ paddingLeft: 10 }} />
-                  {item.emotions.map(emotion => (
-                    <Icon
-                      key={emotion}
-                      name="circle-o"
-                      size={20}
-                      style={{ paddingLeft: 5 }}
-                      color={emotion}
-                    />
+                <View style={styles.notesListItemTopRightContainer}>
+                  <Icon name="trash-o" size={20} style={{ paddingLeft: 10 }}/>
+                  {item.emotions.map((emotion) => (
+                    <Icon key={emotion} name="circle-o" size={20} style={{ paddingLeft: 5 }} color={emotion} />
                   ))}
                 </View>
               </View>
-              <View style={styles.listItemBottomContainer}>
-                <View style={styles.listItemBottomLeftContainer}>
-                  <Text style={styles.listItemNoteText}>{item.note}</Text>
+              <View style={styles.notesListItemBottomContainer}>
+                <View style={styles.notesListItemBottomLeftContainer}>
+                  <Text style={styles.notesListItemNoteText}>
+                    {item.note}
+                  </Text>
                 </View>
-                <View style={styles.listItemBottomRightContainer}>
+                <View style={styles.notesListItemBottomRightContainer}>
                   <Icon name="microphone" size={20} />
                 </View>
               </View>
             </TouchableOpacity>
           )}
         />
-      )
+      );
     }
-    if (sectionPressed === 'atividades') {
-      return <View />
+    if(sectionPressed === 'atividades') {
+      return (
+        <FlatList
+          data={data.activities.mine}
+          keyExtractor={(item) => item.id}
+          style={styles.activitiesContainer}
+          ListHeaderComponent={() => (
+            <View style={styles.activitiesTitleContainer}>
+              <Text style={styles.activitiesTitle}>
+                Meu dia
+              </Text>
+            </View>
+          )}
+          renderItem={({ item }) => (
+            <View style={styles.activitiesListItemContainer}>
+              {item.done ? (
+                  <TouchableOpacity>
+                    <Icon name="dot-circle-o" size={30} style={{ marginRight: 10 }}/>
+                  </TouchableOpacity>
+                )
+                : (
+                  <TouchableOpacity>
+                    <Icon name="circle-o" size={30} style={{ marginRight: 10 }}/>
+                  </TouchableOpacity>
+                )}
+              <Text style={styles.activitiesListItemText}>{item.title}</Text>
+              <View style={styles.activitiesListItemTrashContainer}>
+                <Icon name='trash-o' size={20} />
+              </View>
+            </View>
+          )}
+        />
+      );
     }
   }
 
@@ -77,7 +101,7 @@ const Day = () => {
               style={styles.arrowLeftContainer}
               onPress={() => navigation.goBack()}
             >
-              <Icon name="arrow-left" size={40} color="#fff" />
+              <Icon name="arrow-left" size={40} color="#fff"/>
             </TouchableOpacity>
             <View style={styles.titleContainer}>
               <Text style={styles.titleText}>Dia 11</Text>
@@ -86,31 +110,25 @@ const Day = () => {
 
           <View style={styles.sectionButtonsContainer}>
             <TouchableOpacity
-              style={[
-                styles.sectionButtonContainer,
-                sectionPressed === 'notas'
-                  ? { backgroundColor: '#aeaeae' }
-                  : { backgroundColor: '#fff' },
-              ]}
+              style={[styles.sectionButtonContainer, sectionPressed === 'notas' ? {backgroundColor: '#aeaeae'} : {backgroundColor: '#fff'}]}
               onPress={() => {
-                setSectionPressed('notas')
+                setSectionPressed('notas');
               }}
             >
-              <Text style={styles.sectionButtonText}>Notas</Text>
+              <Text style={styles.sectionButtonText}>
+                Notas
+                </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[
-                styles.sectionButtonContainer,
-                sectionPressed === 'atividades'
-                  ? { backgroundColor: '#aeaeae' }
-                  : { backgroundColor: '#fff' },
-              ]}
+              style={[styles.sectionButtonContainer, sectionPressed === 'atividades' ? {backgroundColor: '#aeaeae'} : {backgroundColor: '#fff'}]}
               onPress={() => {
-                setSectionPressed('atividades')
+                setSectionPressed('atividades');
               }}
             >
-              <Text style={styles.sectionButtonText}>Atividades</Text>
+              <Text style={styles.sectionButtonText}>
+                Atividades
+                </Text>
             </TouchableOpacity>
           </View>
 
@@ -118,7 +136,7 @@ const Day = () => {
         </View>
       </ImageBackground>
     </>
-  )
+  );
 }
 
-export default Day
+export default Day;
