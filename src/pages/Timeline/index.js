@@ -1,26 +1,24 @@
-import React from "react";
+import React from 'react'
 import {
   View,
   Text,
   ImageBackground,
   FlatList,
   TouchableOpacity,
-  StatusBar
-} from "react-native";
+  StatusBar,
+} from 'react-native'
 
-import backgroundImage from "../../assets/backgroundImage.png";
+import backgroundImage from '../../assets/backgroundImage.png'
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-import styles from "./styles";
+import styles from './styles'
 
-import { timelineData } from "../../data";
+import { timelineData } from '../../data'
 
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native'
 
 const Timeline = () => {
-  const navigation = useNavigation();
-
   const TimelineList = () => {
     return (
       <FlatList
@@ -32,7 +30,7 @@ const Timeline = () => {
           </View>
         )}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => navigation.navigate("Day")}>
+          <TouchableOpacity onPress={() => navigation.navigate('Day')}>
             <View style={styles.listItemTopFeelingColors}>
               {item.colors.map(feeling => (
                 <View
@@ -55,16 +53,18 @@ const Timeline = () => {
         )}
         ItemSeparatorComponent={() => <View style={styles.listItemBar} />}
       />
-    );
-  };
+    )
+  }
 
   return (
-    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-      <View style={styles.container}>
-        <TimelineList />
-      </View>
-    </ImageBackground>
-  );
-};
+    <>
+      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+        <View style={styles.container}>
+          <TimelineList />
+        </View>
+      </ImageBackground>
+    </>
+  )
+}
 
-export default Timeline;
+export default Timeline
