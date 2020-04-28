@@ -50,44 +50,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 17,
   },
-  notesListItemContainer: {
-    height: 120,
-    backgroundColor: '#fff',
-    padding: 10,
-    flexDirection: 'column',
-    marginBottom: 10,
-  },
-  notesListItemTopContainer: {
-    flexDirection: 'row',
-    marginBottom: 5,
-  },
-  notesListItemTopLeftContainer: {
-    flex: 1,
-  },
-  notesListItemTopText: {
-    fontSize: 22,
-    fontWeight: 'bold',
-  },
-  notesListItemTopRightContainer: {
-    width: 40,
-    flexDirection: 'row-reverse',
-    alignItems: 'center',
-  },
-  notesListItemBottomContainer: {
-    flexDirection: 'row',
-    flex: 1,
-  },
-  notesListItemBottomLeftContainer: {
-    flex: 1,
-  },
-  notesListItemBottomRightContainer: {
-    width: 30,
-    flexDirection: 'row-reverse',
-    alignItems: 'flex-end',
-  },
-  notesListItemNoteText: {
-    fontSize: 15,
-  },
   activitiesContainer: {
     flex: 1,
     backgroundColor: 'rgba(255,255,255,0.166)',
@@ -97,12 +59,27 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   activitiesTitleContainer: {
+    flexDirection: 'row',
     marginBottom: 15,
   },
   activitiesTitle: {
     color: '#fff',
-    fontSize: 17,
+    fontSize: 26,
     fontWeight: 'bold',
+  },
+  activitiesTitleIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
+  },
+  activitiesSectionTextContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  activitiesSectionText: {
+    fontSize: 14,
+    color: '#c4c4c4',
   },
 })
 

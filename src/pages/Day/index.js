@@ -15,6 +15,7 @@ import styles from './styles'
 import { daysData } from '../../data';
 
 import { useNavigation } from '@react-navigation/native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Day = () => {
   const navigation = useNavigation();
@@ -42,25 +43,76 @@ const Day = () => {
     }
     if(sectionPressed === 'atividades') {
       return (
-        <FlatList
-          data={data.activities.mine}
-          keyExtractor={(item) => item.id}
-          style={styles.activitiesContainer}
-          ListHeaderComponent={() => (
-            <View style={styles.activitiesTitleContainer}>
-              <Text style={styles.activitiesTitle}>
-                Meu dia
-              </Text>
+        <View style={styles.activitiesContainer}>
+          <ScrollView
+            horizontal={true}
+            contentContainerStyle={{ width: '200%' }}
+            showsHorizontalScrollIndicator={false}
+            scrollEventThrottle={200}
+            decelerationRate="fast"
+            pagingEnabled
+          >
+            <View style={{flex:1}}>
+              <FlatList
+                data={data.activities.mine}
+                keyExtractor={(item) => item.id}
+                style={{width: '100%', height: '100%', flex: 1}}
+                ListHeaderComponent={() => (
+                  <View style={styles.activitiesTitleContainer}>
+                    <Text style={styles.activitiesTitle}>
+                      Meu dia
+                    </Text>
+                  </View>
+                )}
+                renderItem={({ item }) => (
+                  <ActivityItem
+                    title={item.title}
+                    done={item.done}
+                    id={item.id}
+                  />
+                )}
+              />
+              <View style={styles.activitiesSectionTextContainer}>
+                <Text style={styles.activitiesSectionText}>
+                  Recomendações
+                </Text>
+                <Icon name="arrow-right" color='#c4c4c4' size={14} style={{marginLeft: 5}}/>
+              </View>
             </View>
-          )}
-          renderItem={({ item }) => (
-            <ActivityItem
-              title={item.title}
-              done={item.done}
-              id={item.id}
-            />
-          )}
-        />
+
+            <View style={{flex: 1}}>
+              <FlatList
+                data={data.activities.mine}
+                keyExtractor={(item) => item.id}
+                style={{width: '100%', height: '100%', flex: 1}}
+                ListHeaderComponent={() => (
+                  <View style={styles.activitiesTitleContainer}>
+                    <View style={styles.activitiesTitleIcon}>
+                      <Icon name="circle" color="#03A9F4" size={20} />
+                    </View>
+                    <Text style={styles.activitiesTitle}>
+                      Recomendações
+                    </Text>
+                  </View>
+                )}
+                renderItem={({ item }) => (
+                  <ActivityItem
+                    title={item.title}
+                    done={item.done}
+                    id={item.id}
+                  />
+                )}
+              />
+              <View style={styles.activitiesSectionTextContainer}>
+                <Icon name="arrow-left" color='#c4c4c4' size={14} style={{marginRight: 5}}/>
+                <Text style={styles.activitiesSectionText}>
+                  Meu dia
+                </Text>
+              </View>
+            </View>
+          </ScrollView>
+        </View>
+
       );
     }
   }
@@ -116,6 +168,7 @@ const Day = () => {
           </View>
 
           <Content />
+
         </View>
       </ImageBackground>
     </>
