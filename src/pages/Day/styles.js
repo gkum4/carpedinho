@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   sectionButtonContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 8,
     margin: 10,
     width: 120,
     height: 30,
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
   },
   sectionButtonText: {
     fontWeight: 'bold',
+    color: '#fff',
     fontSize: 17,
   },
   notesListItemContainer: {
@@ -92,6 +94,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 30,
     marginBottom: 15,
+    borderRadius: 8,
   },
   activitiesTitleContainer: {
     marginBottom: 15,
