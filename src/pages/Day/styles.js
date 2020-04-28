@@ -1,10 +1,12 @@
 import { StyleSheet } from 'react-native'
 import { getStatusBarHeight } from 'react-native-status-bar-height'
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 30 + getStatusBarHeight(true),
+    paddingBottom: getBottomSpace(),
   },
   backgroundImage: {
     flex: 1,
@@ -20,9 +22,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     width: '100%',
-    position: 'absolute',
-    left: 0,
-    top: 0,
   },
   titleText: {
     fontSize: 34,
@@ -49,6 +48,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
     fontSize: 17,
+  },
+  plusIconFrame: {
+    backgroundColor: '#03A9F4',
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: 6,
+  },
+  plusText: {
+    fontSize: 40,
+    color: '#fff',
+    fontWeight: 'bold',
   },
   activitiesContainer: {
     flex: 1,

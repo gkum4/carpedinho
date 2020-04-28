@@ -31,24 +31,29 @@ const Timeline = () => {
           </View>
         )}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => navigation.navigate('Day')}>
-            <View style={styles.listItemTopFeelingColors}>
-              {item.colors.map(feeling => (
-                <View
-                  key={feeling}
-                  style={{ backgroundColor: feeling, flex: 1 }}
-                />
-              ))}
-            </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Day', {
+            date: item.date,
+          })} >
             <View style={styles.listItemContainer}>
-              <Icon name="star-o" size={20} style={styles.listItemStar} />
-              <Text style={styles.listItemText}>{item.date}</Text>
-              <View style={styles.listItemIconsContainer}>
-                {item.note && (
-                  <Icon name="book" size={20} style={{ marginLeft: 10 }} color="#484848"/>
-                )}
-                {item.activities && <Icon name="list" size={20} color="#484848"/>}
+              <View style={styles.listItemTopFeelingColors}>
+                {item.colors.map(feeling => (
+                  <View
+                    key={feeling}
+                    style={{ backgroundColor: feeling, flex: 1, borderRadius: 20 }}
+                  />
+                ))}
               </View>
+              <View style={styles.listItemRowContainer}>
+                <Icon name="star-o" size={20} style={styles.listItemStar} />
+                <Text style={styles.listItemText}>{item.date}</Text>
+                <View style={styles.listItemIconsContainer}>
+                  {item.note && (
+                    <Icon name="book" size={20} style={{ marginLeft: 10 }} color="#484848"/>
+                  )}
+                  {item.activities && <Icon name="list" size={20} color="#484848"/>}
+                </View>
+              </View>
+
             </View>
           </TouchableOpacity>
         )}

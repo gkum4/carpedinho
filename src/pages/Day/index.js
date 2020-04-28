@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { View, Text, ImageBackground, FlatList, TouchableOpacity } from 'react-native';
 
@@ -17,25 +17,42 @@ import { daysData } from '../../data';
 import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const Day = () => {
+const Day = ({ route }) => {
   const navigation = useNavigation();
 
   const [sectionPressed, setSectionPressed] = useState('notas');
 
-  const daySelected = '11 de Abril';
+  const { date } = route.params;
+
+  const data = daysData.find((item) => item.date === date);
 
   const Content = () => {
-    const data = daysData.find((item) => item.date === daySelected);
+
     if(sectionPressed === 'notas') {
       return (
         <FlatList
           data={data.notes}
           keyExtractor={(item) => item.id}
+          showsVerticalScrollIndicator={false}
+          ListHeaderComponent={() => (
+            <View style={{ width: '100%', alignItems: 'center', marginBottom: 10}}>
+              <TouchableOpacity style={styles.plusIconFrame} onPress={() => navigation.navigate('NoteEdit', {
+                title: '',
+                description: '',
+              })}>
+                <Text style={styles.plusText}>+</Text>
+              </TouchableOpacity>
+            </View>
+          )}
           renderItem={({ item }) => (
             <NoteCard
               title={item.title}
               note={item.note}
               emotions={item.emotions}
+              onPress={() => navigation.navigate('NoteEdit', {
+                title: item.title,
+                description: item.note,
+              })}
             />
           )}
         />
@@ -120,6 +137,7 @@ const Day = () => {
   return (
     <>
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+
         <View style={styles.container}>
           <View style={styles.topContainer}>
             <TouchableOpacity
@@ -129,7 +147,7 @@ const Day = () => {
               <Icon name="arrow-left" size={40} color="#fff"/>
             </TouchableOpacity>
             <View style={styles.titleContainer}>
-              <Text style={styles.titleText}>Dia 11</Text>
+              <Text style={styles.titleText}>{data.date}</Text>
             </View>
           </View>
 
@@ -170,6 +188,7 @@ const Day = () => {
           <Content />
 
         </View>
+
       </ImageBackground>
     </>
   );

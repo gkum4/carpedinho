@@ -20,7 +20,7 @@ export default function NoteCard({
   }
 
   return (
-    <TouchableOpacity style={styles.listItemContainer}>
+    <TouchableOpacity style={styles.listItemContainer} onPress={onPress}>
       <View style={styles.listItemTopContainer}>
         <View style={styles.listItemTopLeftContainer}>
           <Text style={styles.listeItemTopText}>{title}</Text>

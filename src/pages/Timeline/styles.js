@@ -23,15 +23,20 @@ const styles = StyleSheet.create({
     height: 4,
     width: '100%',
     flexDirection: 'row',
+    marginBottom: 7,
   },
   listItemContainer: {
-    flexDirection: 'row',
+    flex: 1,
     backgroundColor: 'rgba(255,255,255,0.166)',
-    height: 40,
+    height: 44,
     alignItems: 'center',
     marginBottom: 10,
+    borderRadius: 8,
+  },
+  listItemRowContainer: {
+    flexDirection: 'row',
     paddingHorizontal: 10,
-
+    alignItems: 'center',
   },
   listItemStar: {
     marginRight: 10,
