@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react'
 
 import {
   View,
   Text,
   ImageBackground,
   FlatList,
-  TouchableOpacity
-} from "react-native";
+  TouchableOpacity,
+} from 'react-native'
 
-import backgroundImage from "../../assets/backgroundImage.png";
+import backgroundImage from '../../assets/backgroundImage.png'
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-import styles from "./styles";
+import styles from './styles'
 
-import { timelineData } from "../../data";
+import { timelineData } from '../../data'
 
 const Timeline = () => {
   const TimelineList = () => {
@@ -51,8 +51,8 @@ const Timeline = () => {
         )}
         ItemSeparatorComponent={() => <View style={styles.listItemBar} />}
       />
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -62,7 +62,7 @@ const Timeline = () => {
         </View>
       </ImageBackground>
     </>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline
