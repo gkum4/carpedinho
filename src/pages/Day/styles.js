@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   sectionButtonContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 8,
     margin: 10,
     width: 120,
     height: 30,
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
   },
   sectionButtonText: {
     fontWeight: 'bold',
+    color: '#fff',
     fontSize: 17,
   },
   listItemContainer: {

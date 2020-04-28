@@ -69,8 +69,8 @@ const Day = () => {
               style={[
                 styles.sectionButtonContainer,
                 sectionPressed === 'notas'
-                  ? { backgroundColor: '#aeaeae' }
-                  : { backgroundColor: '#fff' },
+                  ? { backgroundColor: 'rgba(0,0,0,0.1)' }
+                  : { backgroundColor: 'rgba(255,255,255,0.1)' },
               ]}
               onPress={() => {
                 setSectionPressed('notas')
@@ -83,8 +83,8 @@ const Day = () => {
               style={[
                 styles.sectionButtonContainer,
                 sectionPressed === 'atividades'
-                  ? { backgroundColor: '#aeaeae' }
-                  : { backgroundColor: '#fff' },
+                  ? { backgroundColor: 'rgba(0,0,0,0.1)' }
+                  : { backgroundColor: 'rgba(255,255,255,0.1)' },
               ]}
               onPress={() => {
                 setSectionPressed('atividades')
