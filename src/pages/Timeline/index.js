@@ -27,7 +27,7 @@ const Timeline = () => {
             </Text>
           </View>
         )}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <TouchableOpacity onPress={() => navigation.navigate('Day')}>
             <View style={styles.listItemTopFeelingColors}>
               {item.colors.map((feeling) => (

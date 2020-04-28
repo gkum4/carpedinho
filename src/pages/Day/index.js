@@ -17,22 +17,52 @@ const Day = () => {
 
   const [sectionPressed, setSectionPressed] = useState('notas');
 
-  // const Content = () => {
-  //   if(sectionPressed === 'notas') {
-  //     return (
-  //       <FlatList
-  //         data={daysData['']}
-  //       />
-  //     );
-  //   }
-  //   if(sectionPressed === 'atividades') {
-  //     return (
-  //       <View>
+  const daySelected = '11 de Abril';
 
-  //       </View>
-  //     );
-  //   }
-  // }
+  const Content = () => {
+    if(sectionPressed === 'notas') {
+      return (
+        <FlatList
+          data={daysData.find((item) => item.date === daySelected).notes}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <TouchableOpacity style={styles.listItemContainer}>
+              <View style={styles.listItemTopContainer}>
+                <View style={styles.listItemTopLeftContainer}>
+                  <Text style={styles.listeItemTopText}>
+                    {item.title}
+                  </Text>
+                </View>
+                <View style={styles.listItemTopRightContainer}>
+                  <Icon name="trash-o" size={20} style={{ paddingLeft: 10 }}/>
+                  {item.emotions.map((emotion) => (
+                    <Icon key={emotion} name="circle-o" size={20} style={{ paddingLeft: 5 }} color={emotion} />
+                  ))}
+                </View>
+              </View>
+              <View style={styles.listItemBottomContainer}>
+                  <View style={styles.listItemBottomLeftContainer}>
+                    <Text style={styles.listItemNoteText}>
+                      {item.note}
+                    </Text>
+                  </View>
+                  <View style={styles.listItemBottomRightContainer}>
+                    <Icon name="microphone" size={20} />
+                  </View>
+                </View>
+            </TouchableOpacity>
+          )}
+        />
+      );
+    }
+    if(sectionPressed === 'atividades') {
+      return (
+        <View>
+
+        </View>
+      );
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -74,7 +104,7 @@ const Day = () => {
           </TouchableOpacity>
         </View>
 
-        {/* <Content /> */}
+        <Content />
 
       </ImageBackground>
     </View>

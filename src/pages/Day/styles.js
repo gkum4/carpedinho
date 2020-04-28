@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     marginTop: 10,
+    marginBottom: 10,
   },
   sectionButtonContainer: {
     justifyContent: 'center',
@@ -43,6 +44,44 @@ const styles = StyleSheet.create({
   sectionButtonText: {
     fontWeight: 'bold',
     fontSize: 17,
+  },
+  listItemContainer: {
+    height: 120,
+    backgroundColor: '#fff',
+    padding: 10,
+    flexDirection: 'column',
+    marginBottom: 10,
+  },
+  listItemTopContainer: {
+    flexDirection: 'row',
+    marginBottom: 5,
+  },
+  listItemTopLeftContainer: {
+    flex: 1,
+  },
+  listeItemTopText: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  listItemTopRightContainer: {
+    width: 40,
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+  },
+  listItemBottomContainer: {
+    flexDirection: "row",
+    flex: 1,
+  },
+  listItemBottomLeftContainer: {
+    flex: 1,
+  },
+  listItemBottomRightContainer: {
+    width: 30,
+    flexDirection: 'row-reverse',
+    alignItems: 'flex-end',
+  },
+  listItemNoteText: {
+    fontSize: 15,
   }
 });
 

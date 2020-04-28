@@ -61,6 +61,7 @@ export const daysData = [
           '#08E503',
           '#000000',
         ],
+        id: '0',
       }
     ],
   },
@@ -75,39 +76,65 @@ export const daysData = [
           '#08E503',
           '#000000',
         ],
-      }
+        id: '0',
+      },
+      {
+        title: 'Futebol',
+        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: [
+          '#08E503',
+          '#000000',
+        ],
+        id: '1',
+      },
+      {
+        title: 'Futebol',
+        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: [
+          '#08E503',
+          '#000000',
+        ],
+        id: '2',
+      },
     ],
     activities: {
       mine: [
         {
           title: 'Joguei futebol',
           done: true,
+          id: '0',
         },
         {
           title: 'Joguei futebol',
           done: true,
+          id: '1',
         },
         {
           title: 'Joguei futebol',
           done: false,
+          id: '2',
         },
       ],
       recommended: [
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '0',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '1',
         },
         {
           title: 'Falar com seu irmão',
           done: false,
+          id: '2',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '3',
         },
       ],
     }
@@ -123,6 +150,7 @@ export const daysData = [
           '#08E503',
           '#000000',
         ],
+        id: '0'
       }
     ],
     activities: {
@@ -130,32 +158,39 @@ export const daysData = [
         {
           title: 'Joguei futebol',
           done: true,
+          id: '0',
         },
         {
           title: 'Joguei futebol',
           done: true,
+          id: '1',
         },
         {
           title: 'Joguei futebol',
           done: false,
+          id: '2',
         },
       ],
       recommended: [
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '0',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '1',
         },
         {
           title: 'Falar com seu irmão',
           done: false,
+          id: '2',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '3',
         },
       ],
     }
@@ -168,32 +203,39 @@ export const daysData = [
         {
           title: 'Joguei futebol',
           done: true,
+          id: '0',
         },
         {
           title: 'Joguei futebol',
           done: true,
+          id: '1',
         },
         {
           title: 'Joguei futebol',
           done: false,
+          id: '2',
         },
       ],
       recommended: [
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '0',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '1',
         },
         {
           title: 'Falar com seu irmão',
           done: false,
+          id: '2',
         },
         {
           title: 'Falar com seu irmão',
           done: true,
+          id: '3',
         },
       ],
     }
