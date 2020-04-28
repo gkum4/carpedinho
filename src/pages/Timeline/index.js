@@ -10,7 +10,10 @@ import styles from './styles';
 
 import { timelineData } from '../../data';
 
+import { useNavigation } from '@react-navigation/native';
+
 const Timeline = () => {
+  const navigation = useNavigation();
 
   const TimelineList = () => {
     return (
@@ -25,7 +28,7 @@ const Timeline = () => {
           </View>
         )}
         renderItem={({item}) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Day')}>
             <View style={styles.listItemTopFeelingColors}>
               {item.colors.map((feeling) => (
                 <View key={feeling} style={{backgroundColor: feeling, flex: 1}} />

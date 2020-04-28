@@ -48,4 +48,154 @@ export const timelineData = [
       '#FFD600',
     ],
   },
+];
+
+export const daysData = [
+  {
+    date: '12 de Abril',
+    notes: [
+      {
+        title: 'Futebol',
+        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: [
+          '#08E503',
+          '#000000',
+        ],
+      }
+    ],
+  },
+
+  {
+    date: '11 de Abril',
+    notes: [
+      {
+        title: 'Futebol',
+        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: [
+          '#08E503',
+          '#000000',
+        ],
+      }
+    ],
+    activities: {
+      mine: [
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+        },
+      ],
+      recommended: [
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: false,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+      ],
+    }
+  },
+
+  {
+    date: '10 de Abril',
+    notes: [
+      {
+        title: 'Futebol',
+        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: [
+          '#08E503',
+          '#000000',
+        ],
+      }
+    ],
+    activities: {
+      mine: [
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+        },
+      ],
+      recommended: [
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: false,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+      ],
+    }
+  },
+
+  {
+    date: '9 de Abril',
+    activities: {
+      mine: [
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: true,
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+        },
+      ],
+      recommended: [
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: false,
+        },
+        {
+          title: 'Falar com seu irmão',
+          done: true,
+        },
+      ],
+    }
+  },
 ]
