@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 30 + getStatusBarHeight(true),
     paddingBottom: getBottomSpace(),
+    minHeight: '100%',
   },
   backgroundImage: {
     flex: 1,
