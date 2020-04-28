@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   activitiesContainer: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255,255,255,0.166)',
     paddingVertical: 10,
     paddingHorizontal: 30,
     marginBottom: 15,
@@ -97,22 +97,10 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   activitiesTitle: {
+    color: '#fff',
     fontSize: 17,
     fontWeight: 'bold',
   },
-  activitiesListItemContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 10,
-  },
-  activitiesListItemText: {
-    fontSize: 17,
-  },
-  activitiesListItemTrashContainer: {
-    flex: 1,
-    flexDirection: 'row-reverse',
-    alignItems: 'center',
-  }
 })
 
 export default styles

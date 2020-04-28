@@ -45,9 +45,9 @@ const Timeline = () => {
               <Text style={styles.listItemText}>{item.date}</Text>
               <View style={styles.listItemIconsContainer}>
                 {item.note && (
-                  <Icon name="book" size={20} style={{ marginLeft: 10 }} />
+                  <Icon name="book" size={20} style={{ marginLeft: 10 }} color="#484848"/>
                 )}
-                {item.activities && <Icon name="list" size={20} />}
+                {item.activities && <Icon name="list" size={20} color="#484848"/>}
               </View>
             </View>
           </TouchableOpacity>

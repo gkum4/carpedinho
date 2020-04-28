@@ -6,7 +6,11 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import backgroundImage from '../../assets/backgroundImage.png';
 
-import styles from './styles';
+import NoteCard from '../../components/NoteCard'
+
+import ActivityItem from '../../components/ActivityItem';
+
+import styles from './styles'
 
 import { daysData } from '../../data';
 
@@ -27,31 +31,11 @@ const Day = () => {
           data={data.notes}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <TouchableOpacity style={styles.notesListItemContainer}>
-              <View style={styles.notesListItemTopContainer}>
-                <View style={styles.notesListItemTopLeftContainer}>
-                  <Text style={styles.notesListItemTopText}>
-                    {item.title}
-                  </Text>
-                </View>
-                <View style={styles.notesListItemTopRightContainer}>
-                  <Icon name="trash-o" size={20} style={{ paddingLeft: 10 }}/>
-                  {item.emotions.map((emotion) => (
-                    <Icon key={emotion} name="circle-o" size={20} style={{ paddingLeft: 5 }} color={emotion} />
-                  ))}
-                </View>
-              </View>
-              <View style={styles.notesListItemBottomContainer}>
-                <View style={styles.notesListItemBottomLeftContainer}>
-                  <Text style={styles.notesListItemNoteText}>
-                    {item.note}
-                  </Text>
-                </View>
-                <View style={styles.notesListItemBottomRightContainer}>
-                  <Icon name="microphone" size={20} />
-                </View>
-              </View>
-            </TouchableOpacity>
+            <NoteCard
+              title={item.title}
+              note={item.note}
+              emotions={item.emotions}
+            />
           )}
         />
       );
@@ -70,22 +54,11 @@ const Day = () => {
             </View>
           )}
           renderItem={({ item }) => (
-            <View style={styles.activitiesListItemContainer}>
-              {item.done ? (
-                  <TouchableOpacity>
-                    <Icon name="dot-circle-o" size={30} style={{ marginRight: 10 }}/>
-                  </TouchableOpacity>
-                )
-                : (
-                  <TouchableOpacity>
-                    <Icon name="circle-o" size={30} style={{ marginRight: 10 }}/>
-                  </TouchableOpacity>
-                )}
-              <Text style={styles.activitiesListItemText}>{item.title}</Text>
-              <View style={styles.activitiesListItemTrashContainer}>
-                <Icon name='trash-o' size={20} />
-              </View>
-            </View>
+            <ActivityItem
+              title={item.title}
+              done={item.done}
+              id={item.id}
+            />
           )}
         />
       );

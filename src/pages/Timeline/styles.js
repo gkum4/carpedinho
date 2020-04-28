@@ -26,16 +26,18 @@ const styles = StyleSheet.create({
   },
   listItemContainer: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255,255,255,0.166)',
     height: 40,
     alignItems: 'center',
     marginBottom: 10,
     paddingHorizontal: 10,
+
   },
   listItemStar: {
     marginRight: 10,
   },
   listItemText: {
+    color: '#fff',
     fontSize: 17,
     fontWeight: 'bold',
   },
