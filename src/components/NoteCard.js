@@ -115,26 +115,3 @@ const styles = StyleSheet.create({
     color: '#E2E2E2',
   },
 })
-
-{
-  /* <TouchableOpacity
-onLongPress={onDelete}
-onPress={onPress}
-style={[styles.item]}
->
-<View
-  style={{
-    alignItems: 'flex-start',
-    paddingHorizontal: 15,
-    paddingVertical: 25,
-    backgroundColor: 'rgba(255,255,255,0.166)',
-    borderRadius: 8,
-  }}
->
-  <View>
-    <Text style={styles.title}>{truncateString(title, 20)}</Text>
-    <Text style={styles.description}>{truncateString(note, 80)}</Text>
-  </View>
-</View>
-</TouchableOpacity> */
-}
