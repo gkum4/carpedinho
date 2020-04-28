@@ -1,12 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
+import { getStatusBarHeight } from 'react-native-status-bar-height'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 30 + getStatusBarHeight(true),
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: "cover",
+    resizeMode: 'cover',
     padding: 15,
   },
   topContainer: {
@@ -14,7 +16,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     justifyContent: 'center',
-    alignItems: "center",
+    alignItems: 'center',
     flex: 1,
     width: '100%',
     position: 'absolute',
@@ -69,7 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   listItemBottomContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     flex: 1,
   },
   listItemBottomLeftContainer: {
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
   },
   listItemNoteText: {
     fontSize: 15,
-  }
-});
+  },
+})
 
-export default styles;
+export default styles

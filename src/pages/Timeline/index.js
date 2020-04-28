@@ -19,6 +19,7 @@ import { timelineData } from '../../data'
 import { useNavigation } from '@react-navigation/native'
 
 const Timeline = () => {
+  const navigation = useNavigation()
   const TimelineList = () => {
     return (
       <FlatList
