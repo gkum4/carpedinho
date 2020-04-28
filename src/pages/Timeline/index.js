@@ -31,7 +31,9 @@ const Timeline = () => {
           </View>
         )}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => navigation.navigate('Day', {
+          <TouchableOpacity onPress={() => navigation.navigate('Day', item.date === 'Hoje' ? {
+            date: '11 de Abril',
+          } : {
             date: item.date,
           })} >
             <View style={styles.listItemContainer}>

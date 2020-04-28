@@ -147,7 +147,7 @@ const Day = ({ route }) => {
               <Icon name="arrow-left" size={40} color="#fff"/>
             </TouchableOpacity>
             <View style={styles.titleContainer}>
-              <Text style={styles.titleText}>{data.date}</Text>
+              <Text style={styles.titleText}>{date}</Text>
             </View>
           </View>
 
