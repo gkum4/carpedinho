@@ -1,36 +1,38 @@
-import React from "react";
-
+import React from 'react'
 import {
   View,
   Text,
   ImageBackground,
   FlatList,
   TouchableOpacity,
-} from "react-native";
+  StatusBar,
+} from 'react-native'
 
-import backgroundImage from "../../assets/backgroundImage.png";
+import backgroundImage from '../../assets/backgroundImage.png'
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome'
 
-import styles from "./styles";
+import styles from './styles'
 
-import { timelineData } from "../../data";
+import { timelineData } from '../../data'
+
+import { useNavigation } from '@react-navigation/native'
 
 const Timeline = () => {
   const TimelineList = () => {
     return (
       <FlatList
         data={timelineData}
-        keyExtractor={(item) => item.date}
+        keyExtractor={item => item.date}
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
             <Text style={styles.titleText}>Minha Timeline</Text>
           </View>
         )}
         renderItem={({ item }) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Day')}>
             <View style={styles.listItemTopFeelingColors}>
-              {item.colors.map((feeling) => (
+              {item.colors.map(feeling => (
                 <View
                   key={feeling}
                   style={{ backgroundColor: feeling, flex: 1 }}
@@ -51,8 +53,8 @@ const Timeline = () => {
         )}
         ItemSeparatorComponent={() => <View style={styles.listItemBar} />}
       />
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -62,7 +64,7 @@ const Timeline = () => {
         </View>
       </ImageBackground>
     </>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline
