@@ -1,13 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 15,
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: "cover",
-    padding: 15,
+    resizeMode: 'cover',
   },
   titleContainer: {
     marginBottom: 10,
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 10,
   },
-});
+})
 
-export default styles;
+export default styles
