@@ -1,16 +1,22 @@
-import React from 'react';
+import React from "react";
+import {
+  View,
+  Text,
+  ImageBackground,
+  FlatList,
+  TouchableOpacity,
+  StatusBar
+} from "react-native";
 
-import { View, Text, ImageBackground, FlatList, TouchableOpacity } from 'react-native';
+import backgroundImage from "../../assets/backgroundImage.png";
 
-import backgroundImage from '../../assets/backgroundImage.png';
+import Icon from "react-native-vector-icons/FontAwesome";
 
-import Icon from 'react-native-vector-icons/FontAwesome'
+import styles from "./styles";
 
-import styles from './styles';
+import { timelineData } from "../../data";
 
-import { timelineData } from '../../data';
-
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 const Timeline = () => {
   const navigation = useNavigation();
@@ -22,44 +28,43 @@ const Timeline = () => {
         keyExtractor={item => item.date}
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>
-              Minha Timeline
-            </Text>
+            <Text style={styles.titleText}>Minha Timeline</Text>
           </View>
         )}
-        renderItem={({item}) => (
-          <TouchableOpacity onPress={() => navigation.navigate('Day')}>
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={() => navigation.navigate("Day")}>
             <View style={styles.listItemTopFeelingColors}>
-              {item.colors.map((feeling) => (
-                <View key={feeling} style={{backgroundColor: feeling, flex: 1}} />
+              {item.colors.map(feeling => (
+                <View
+                  key={feeling}
+                  style={{ backgroundColor: feeling, flex: 1 }}
+                />
               ))}
             </View>
             <View style={styles.listItemContainer}>
-              <Icon name="star-o" size={20} style={styles.listItemStar}/>
+              <Icon name="star-o" size={20} style={styles.listItemStar} />
               <Text style={styles.listItemText}>{item.date}</Text>
               <View style={styles.listItemIconsContainer}>
-                {item.note && <Icon name="book" size={20} style={{ marginLeft: 10 }} />}
+                {item.note && (
+                  <Icon name="book" size={20} style={{ marginLeft: 10 }} />
+                )}
                 {item.activities && <Icon name="list" size={20} />}
               </View>
             </View>
           </TouchableOpacity>
         )}
-        ItemSeparatorComponent={() => (
-          <View style={styles.listItemBar}/>
-        )}
+        ItemSeparatorComponent={() => <View style={styles.listItemBar} />}
       />
     );
-  }
+  };
 
   return (
-    <View style={styles.container}>
-      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.container}>
         <TimelineList />
-
-      </ImageBackground>
-    </View>
+      </View>
+    </ImageBackground>
   );
-}
+};
 
 export default Timeline;
