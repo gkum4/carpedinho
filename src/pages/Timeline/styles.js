@@ -1,12 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
+import { getStatusBarHeight } from 'react-native-status-bar-height'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 30 + getStatusBarHeight(true),
   },
   backgroundImage: {
     flex: 1,
-    resizeMode: "cover",
+    resizeMode: 'cover',
     padding: 15,
   },
   titleContainer: {
@@ -48,6 +50,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 10,
   },
-});
+})
 
-export default styles;
+export default styles
