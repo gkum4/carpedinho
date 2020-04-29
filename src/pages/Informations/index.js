@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
-import { Text, View, TouchableOpacity, ImageBackground, TextInput, Image, ScrollView } from 'react-native';
-import { CheckBox }  from 'react-native-elements';
-import DismissKeyboard from '../../components/DismissKeyboard';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 import { useNavigation } from '@react-navigation/native';
-
+import React, { useState } from 'react';
+import { Image, ImageBackground, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { CheckBox } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import imageBackground from '../../assets/backgroundImage.png';
-
+import logo from '../../assets/logo.png';
 import styles from './styles';
 
-import logo from '../../assets/logo.png';
+
+
+
+
 
 const Informations = () => {
   const [checked, setChecked] = useState(false);
