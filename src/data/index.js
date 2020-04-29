@@ -48,6 +48,96 @@ export const timelineData = [
       '#FFD600',
     ],
   },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
+  {
+    date: '12 de Abril',
+    star: false,
+    note: true,
+    activities: false,
+    colors: [
+      '#000000',
+      '#08E503',
+    ],
+  },
 ];
 
 export const daysData = [
@@ -62,8 +152,11 @@ export const daysData = [
           '#000000',
         ],
         id: '0',
-      }
+      },
     ],
+    activities: {
+      mine: [],
+    },
   },
 
   {
@@ -158,6 +251,56 @@ export const daysData = [
           title: 'Joguei futebol',
           done: false,
           id: '2',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '3',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '4',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '5',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '6',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '7',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '8',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '9',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '10',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '11',
+        },
+        {
+          title: 'Joguei futebol',
+          done: false,
+          id: '12',
         },
       ],
       recommended: [
@@ -290,34 +433,50 @@ export const daysData = [
 export const statistics = [
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    percentage: '100%'
+    color: '#ffd600',
+    percentage: '100%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Vulnerabilidade',
-    percentage: '10%'
+    color: '#0429ec',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '0%',
+    numberOfTimes: 0,
   },
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    percentage: '10%'
+    color: '#ffd600',
+    percentage: '10%',
+    numberOfTimes: 5,
   },
 ];

@@ -23,7 +23,7 @@ const Informations = () => {
       <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.container}>
 
-          <Image source={logo} style={{ width: 150, height: 150, marginBottom: 40 }} />
+          <Image source={logo} style={{ width: 80, height: 80, marginBottom: 20 }} />
 
           <View style={styles.titleContainer}>
             <Text style={styles.titleText}>

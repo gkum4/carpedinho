@@ -33,29 +33,46 @@ const styles = StyleSheet.create({
   },
   itemEmotionContainer: {
     marginRight: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  itemPercentageText: {
+    color: '#fff',
+    fontSize: 11,
   },
   itemEmotionText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 11,
-    textAlign: 'center',
+    marginLeft: 2,
   },
   itemVerticalBar: {
     height: '100%',
     backgroundColor: 'rgba(255,255,255,0.166)',
     width: 5,
   },
-  itemHorizontalBar: {
-    backgroundColor: '#828282',
-    height: '40%',
-    borderTopRightRadius: 8,
-    borderBottomRightRadius: 8,
+  itemRightContainer: {
+    flexDirection: 'column',
+    flex: 1,
     justifyContent: 'center',
+  },
+  itemPercentageBarViewContainer: {
+    width: '100%',
+    height: 30,
+    flexDirection: 'row',
+  },
+  itemPercentageBarContainer: {
+    backgroundColor: '#828282',
+    height: '100%',
     alignItems: 'center',
-    maxWidth: '85%',
+    justifyContent: 'center',
+    borderBottomRightRadius: 8,
+    borderTopRightRadius: 8,
   },
   itemNumberOfTimesText: {
-
+    color: '#fff',
+    fontSize: 11,
+    fontWeight: 'bold',
   },
 });
 

@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     resizeMode: 'cover',
-    padding: 15,
+    paddingHorizontal: 15,
+    paddingTop: 15,
   },
   titleContainer: {
     marginBottom: 10,
@@ -57,6 +58,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 10,
   },
+  userIdContainer: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    alignItems: 'center'
+
+  },
+  userIdText: {
+    color: 'rgba(255,255,255,0.166)',
+    fontSize: 8,
+    fontWeight: 'bold',
+  }
 })
 
 export default styles

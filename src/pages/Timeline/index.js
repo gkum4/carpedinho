@@ -15,7 +15,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import styles from './styles'
 
 import { timelineData } from '../../data'
-
 import { useNavigation } from '@react-navigation/native'
 
 const Timeline = () => {
@@ -28,6 +27,7 @@ const Timeline = () => {
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
             <Text style={styles.titleText}>Minha Timeline</Text>
+            <Text style={styles.userIdText}>Seu ID: 912831824972</Text>
           </View>
         )}
         renderItem={({ item }) => (

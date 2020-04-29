@@ -22,7 +22,7 @@ const PatientMenu = () => {
           <View style={styles.topContainer}>
             <TouchableOpacity
               style={styles.arrowLeftContainer}
-              // onPress={() => navigation.goBack()}
+              onPress={() => navigation.goBack()}
             >
               <Icon name="arrow-left" size={40} color="#fff"/>
             </TouchableOpacity>
@@ -40,7 +40,10 @@ const PatientMenu = () => {
               <Text style={styles.buttonText}>Estatísticas</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => navigation.navigate('PatientRecommendations')}
+            >
               <Icon name="list" size={70} color="#fff" />
               <Text style={styles.buttonText}>Recomendações</Text>
             </TouchableOpacity>

@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255,255,255,0.166)',
     paddingVertical: 10,
     paddingHorizontal: 30,
-    marginBottom: 15,
+    marginBottom: 30,
     borderRadius: 8,
   },
   activitiesTitleContainer: {
