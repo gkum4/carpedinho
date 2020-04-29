@@ -4,7 +4,6 @@ on:
     branches:
       - master
 jobs:
-  install-and-test:
   build-android:
     needs: install-and-test
     runs-on: ubuntu-latest
