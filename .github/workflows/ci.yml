@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install
       - name: Build Android Release
-        run: bash ./gradlew assembleDebug --stacktrace
+        run: cd android ./gradlew assembleDebug --stacktrace
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
