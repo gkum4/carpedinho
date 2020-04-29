@@ -7,6 +7,9 @@ import Day from '../pages/Day';
 import NoteEdit from '../pages/NoteEdit';
 import Informations from '../pages/Informations';
 
+import PatientMenu from '../pagesPsychologist/PatientMenu';
+import PatientStatistics from '../pagesPsychologist/PatientStatistics';
+
 const Stack = createStackNavigator();
 
 
@@ -22,6 +25,9 @@ const Routes = () => {
       <Stack.Screen name="Day" component={Day} />
       <Stack.Screen name="NoteEdit" component={NoteEdit} />
       <Stack.Screen name="Informations" component={Informations} />
+
+      <Stack.Screen name="PatientMenu" component={PatientMenu} />
+      <Stack.Screen name="PatientStatistics" component={PatientStatistics} />
     </Stack.Navigator>
   );
 }

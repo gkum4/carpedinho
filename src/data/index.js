@@ -285,4 +285,39 @@ export const daysData = [
       ],
     }
   },
-]
+];
+
+export const statistics = [
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '100%'
+  },
+  {
+    emotion: 'Vulnerabilidade',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+  {
+    emotion: 'Alegria',
+    percentage: '10%'
+  },
+];
