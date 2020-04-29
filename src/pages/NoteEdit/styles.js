@@ -61,10 +61,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 30,
-    padding: 20,
     position: 'absolute',
     bottom: 10 + getBottomSpace(),
     right: 10,
+  },
+  camIconContainer: {
+    backgroundColor: '#03A9F4',
+    width: 60,
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 30,
+    position: 'absolute',
+    bottom: 10 + getBottomSpace(),
+    right: 80,
   }
 });
 
