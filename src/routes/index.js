@@ -2,10 +2,12 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 
+import Informations from '../pages/Informations';
 import Timeline from '../pages/Timeline';
 import Day from '../pages/Day';
+import Feeling from '../pages/Feeling';
+import Feeling2 from '../pages/Feeling2';
 import NoteEdit from '../pages/NoteEdit';
-import Informations from '../pages/Informations';
 
 import PatientMenu from '../pagesPsychologist/PatientMenu';
 import PatientStatistics from '../pagesPsychologist/PatientStatistics';
@@ -22,12 +24,14 @@ const Routes = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Test"
+      initialRouteName="Informations"
     >
+      <Stack.Screen name="Informations" component={Informations} />
       <Stack.Screen name="Timeline" component={Timeline} />
       <Stack.Screen name="Day" component={Day} />
+      <Stack.Screen name="Feeling" component={Feeling} />
+      <Stack.Screen name="Feeling2" component={Feeling2} />
       <Stack.Screen name="NoteEdit" component={NoteEdit} />
-      <Stack.Screen name="Informations" component={Informations} />
 
       <Stack.Screen name="PatientMenu" component={PatientMenu} />
       <Stack.Screen name="PatientStatistics" component={PatientStatistics} />

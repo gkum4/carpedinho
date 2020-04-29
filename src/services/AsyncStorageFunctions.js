@@ -42,8 +42,10 @@ Array de Notas: [
     title: 'Title',
     description: 'Description',
     emotions: [
-      'Emoção',
-      'Emoção',
+      {
+        emotion: 'Emotion',
+        intensity: '%'
+      }
     ],
   },
 ];

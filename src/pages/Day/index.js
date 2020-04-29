@@ -102,7 +102,6 @@ const Day = ({ route }) => {
               <FlatList
                 data={!!data.activities.recommended ? data.activities.recommended : []}
                 keyExtractor={item => item.id}
-                showsVerticalScrollIndicator={false}
                 style={{ width: '100%', height: '100%', flex: 1 }}
                 ListHeaderComponent={() => (
                   <View style={styles.activitiesTitleContainer}>
@@ -188,10 +187,7 @@ const Day = ({ route }) => {
             buttonColor="#03A9F4"
             onPress={() => {
               console.log('Adicionar nova nota');
-              navigation.navigate('NoteEdit', {
-                title: '',
-                description: '',
-              })
+              navigation.navigate('Feeling');
             }}
           />
         )}
