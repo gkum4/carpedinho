@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+    justifyContent:'space-between'
   },
   titleContainer: {
     justifyContent: 'center',
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   titleText: {
-    fontSize: 27,
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
   },
@@ -37,6 +38,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
+  },
+  skipButton : {
+    backgroundColor: '#03A9F4',
+    paddingHorizontal:10,
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:8,
+  },
+  skipButtonText : {
+    color:'white'
   },
   expressionIcon: {
     width: 100,

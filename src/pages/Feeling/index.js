@@ -38,6 +38,12 @@ const Timeline = () => {
             <View style={styles.titleContainer}>
               <Text style={styles.titleText}>Como você está?</Text>
             </View>
+            <TouchableOpacity
+                    style={styles.skipButton}
+                    onPress={() => {}}
+                  >
+                    <Text style={styles.skipButtonText}>Pular</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.buttonsContainer}>
