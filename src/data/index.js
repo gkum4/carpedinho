@@ -1,156 +1,130 @@
 export const timelineData = [
   {
     date: 'Hoje',
+    id: '0',
     star: false,
     note: true,
     activities: true,
-    colors: [
-      '#2300f9',
-      '#08E503',
-      '#ff0000'
-    ],
+    colors: ['#2300f9', '#08E503', '#ff0000'],
   },
   {
     date: '12 de Abril',
+    id: '1',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '11 de Abril',
+    id: '2',
     star: false,
     note: true,
     activities: true,
-    colors: [
-      '#ff0000'
-    ],
+    colors: ['#ff0000'],
   },
   {
     date: '10 de Abril',
+    id: '3',
     star: false,
     note: true,
     activities: true,
-    colors: [
-      '#08E503',
-    ],
+    colors: ['#08E503'],
   },
   {
     date: '9 de Abril',
+    id: '4',
     star: false,
     note: false,
     activities: true,
-    colors: [
-      '#2300f9',
-      '#FFD600',
-    ],
+    colors: ['#2300f9', '#FFD600'],
   },
   {
     date: '12 de Abril',
+    id: '5',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '6',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '7',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '8',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '9',
+
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '10',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '11',
+
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '12',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
   {
     date: '12 de Abril',
+    id: '13',
     star: false,
     note: true,
     activities: false,
-    colors: [
-      '#000000',
-      '#08E503',
-    ],
+    colors: ['#000000', '#08E503'],
   },
-];
+]
 
 export const daysData = [
   {
+    id: 0,
     date: '12 de Abril',
     notes: [
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '0',
       },
     ],
@@ -164,74 +138,58 @@ export const daysData = [
     notes: [
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '0',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '1',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '2',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '3',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '4',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '5',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '6',
       },
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
         id: '7',
       },
     ],
@@ -325,7 +283,7 @@ export const daysData = [
           id: '3',
         },
       ],
-    }
+    },
   },
 
   {
@@ -333,13 +291,11 @@ export const daysData = [
     notes: [
       {
         title: 'Futebol',
-        note: 'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: [
-          '#08E503',
-          '#000000',
-        ],
-        id: '0'
-      }
+        note:
+          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
+        emotions: ['#08E503', '#000000'],
+        id: '0',
+      },
     ],
     activities: {
       mine: [
@@ -381,7 +337,7 @@ export const daysData = [
           id: '3',
         },
       ],
-    }
+    },
   },
 
   {
@@ -426,9 +382,9 @@ export const daysData = [
           id: '3',
         },
       ],
-    }
+    },
   },
-];
+]
 
 export const statistics = [
   {
@@ -479,8 +435,7 @@ export const statistics = [
     percentage: '10%',
     numberOfTimes: 5,
   },
-];
-
+]
 
 export const happyFeelings = [
   {
@@ -744,4 +699,4 @@ export const badFeelings = [
     description: `Sensação de dano, emocional ou físico; inseguro; instável.`,
     //imgSrc: require('../assets/vulnerabilidade.png'),
   },
-];
+]
