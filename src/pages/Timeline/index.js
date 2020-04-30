@@ -23,7 +23,7 @@ const Timeline = () => {
     return (
       <FlatList
         data={timelineData}
-        keyExtractor={item => item.date}
+        keyExtractor={item => item.id}
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
             <Text style={styles.titleText}>Minha Timeline</Text>
