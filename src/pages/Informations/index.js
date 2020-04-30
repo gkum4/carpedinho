@@ -28,16 +28,19 @@ const Informations = () => {
           <View style={styles.inputsContainer}>
             <TextInput
               placeholder ={'Digite seu nome'}
+              autoCapitalize='words'
               style={styles.input}
               placeholderTextColor="#cecece"
             />
             <TextInput
               placeholder ={'Digite sua idade'}
+              keyboardType='numeric'
               style={styles.input}
               placeholderTextColor="#cecece"
             />
             <TextInput
               placeholder ={' Crie sua senha'}
+              secureTextEntry={true}
               style={styles.input}
               placeholderTextColor="#cecece"
             />

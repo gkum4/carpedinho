@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   },
   listItemStar: {
     marginRight: 10,
+    color:'#FFEE58',
   },
   listItemText: {
     color: '#fff',

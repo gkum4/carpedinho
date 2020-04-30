@@ -5,7 +5,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: true,
-    colors: ['#2300f9', '#08E503', '#ff0000'],
+    colors: ['#2196F3', '#43A047', '#e53935'],
   },
   {
     date: '12 de Abril',
@@ -13,7 +13,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '11 de Abril',
@@ -21,7 +21,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: true,
-    colors: ['#ff0000'],
+    colors: ['#e53935'],
   },
   {
     date: '10 de Abril',
@@ -29,7 +29,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: true,
-    colors: ['#08E503'],
+    colors: ['#43A047'],
   },
   {
     date: '9 de Abril',
@@ -37,7 +37,7 @@ export const timelineData = [
     star: false,
     note: false,
     activities: true,
-    colors: ['#2300f9', '#FFD600'],
+    colors: ['#2196F3', '#FFEB3B'],
   },
   {
     date: '12 de Abril',
@@ -45,7 +45,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -53,7 +53,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -61,7 +61,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -69,7 +69,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -78,7 +78,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -86,7 +86,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -95,7 +95,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -103,7 +103,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
   {
     date: '12 de Abril',
@@ -111,7 +111,7 @@ export const timelineData = [
     star: false,
     note: true,
     activities: false,
-    colors: ['#000000', '#08E503'],
+    colors: ['#212121', '#43A047'],
   },
 ]
 
@@ -124,7 +124,7 @@ export const daysData = [
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '0',
       },
     ],
@@ -140,56 +140,56 @@ export const daysData = [
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '0',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '1',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '2',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '3',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '4',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '5',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '6',
       },
       {
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '7',
       },
     ],
@@ -293,7 +293,7 @@ export const daysData = [
         title: 'Futebol',
         note:
           'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#08E503', '#000000'],
+        emotions: ['#43A047', '#212121'],
         id: '0',
       },
     ],
@@ -389,13 +389,13 @@ export const daysData = [
 export const statistics = [
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '10%',
     numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '100%',
     numberOfTimes: 5,
   },
@@ -407,31 +407,31 @@ export const statistics = [
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '10%',
     numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '10%',
     numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '0%',
     numberOfTimes: 0,
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '10%',
     numberOfTimes: 5,
   },
   {
     emotion: 'Alegria',
-    color: '#ffd600',
+    color: '#FFEB3B',
     percentage: '10%',
     numberOfTimes: 5,
   },
