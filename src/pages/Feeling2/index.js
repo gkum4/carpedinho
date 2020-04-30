@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   View,
   Text,
@@ -13,16 +13,13 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import styles from './styles'
 
-import { timelineData } from '../../data'
 import { useNavigation } from '@react-navigation/native'
 
-import felizIcon from '../../assets/expressions/felizIcon.png';
-import neutroIcon from '../../assets/expressions/neutroIcon.png';
-import tristeIcon from '../../assets/expressions/tristeIcon.png';
-import { FlatList } from 'react-native-gesture-handler'
+import Slider from '@react-native-community/slider';
 
 const Timeline = () => {
   const navigation = useNavigation();
+  const [sliderValue, setSliderValue] = useState(0);
 
   const list = [
     {
@@ -72,7 +69,44 @@ const Timeline = () => {
             </View>
           </View>
 
-          <FlatList
+          <View style={styles.itemContainer}>
+            <Slider
+              style={{width: '100%', height: '100%', zIndex: 3, position: 'absolute'}}
+              minimumValue={0}
+              maximumValue={100}
+              value={sliderValue}
+              onValueChange={(value) => setSliderValue(value)}
+              minimumTrackTintColor="#00000000"
+              maximumTrackTintColor="#00000000"
+              thumbTintColor="#00000000"
+            />
+
+            <View style={styles.itemContentContainer}>
+              <Icon name='circle-o' size={50} color="#fff" />
+              <Text style={styles.itemText}>
+                Resiliência
+              </Text>
+            </View>
+
+            <View style={styles.itemRightContainer}>
+              <TouchableOpacity
+                style={styles.itemQuestionMarkContainer}
+                onPress={() => console.log('Button pressed')}
+              >
+                <Icon name="question" size={20} color="#fff"/>
+              </TouchableOpacity>
+            </View>
+
+            <View
+              style={[styles.itemColorContainer, {width: `${sliderValue}%`}]}
+            />
+          </View>
+
+
+
+
+
+          {/* <FlatList
             data={list}
             style={styles.listContainer}
             renderItem={() => (
@@ -80,7 +114,7 @@ const Timeline = () => {
 
               </View>
             )}
-          />
+          /> */}
 
         </View>
       </ImageBackground>

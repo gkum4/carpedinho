@@ -64,7 +64,7 @@ const Informations = () => {
             </View>
           </View>
           <TouchableOpacity
-            onPress={() => checked ? navigation.navigate('PatientMenu') : navigation.navigate('Timeline')}
+            onPress={() => checked ? navigation.navigate('PatientMenu') : navigation.navigate('Lock')}
             style={styles.containerButton}
           >
             <Text style={styles.containerText3}>Feito</Text>

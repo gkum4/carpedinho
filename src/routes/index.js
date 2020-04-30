@@ -3,6 +3,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Informations from '../pages/Informations';
+import Lock from '../pages/Lock';
 import Timeline from '../pages/Timeline';
 import Day from '../pages/Day';
 import Feeling from '../pages/Feeling';
@@ -26,6 +27,7 @@ const Routes = () => {
       }}
       initialRouteName="Informations"
     >
+      <Stack.Screen name="Lock" component={Lock} />
       <Stack.Screen name="Informations" component={Informations} />
       <Stack.Screen name="Timeline" component={Timeline} />
       <Stack.Screen name="Day" component={Day} />
