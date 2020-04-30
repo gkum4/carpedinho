@@ -7,11 +7,6 @@ import imageBackground from '../../assets/backgroundImage.png';
 import logo from '../../assets/logo.png';
 import styles from './styles';
 
-
-
-
-
-
 const Informations = () => {
   const [checked, setChecked] = useState(false);
   const navigation = useNavigation();

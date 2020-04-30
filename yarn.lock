@@ -4960,6 +4960,11 @@ react-native-screens@^2.7.0:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.7.0.tgz#2d3cf3c39a665e9ca1c774264fccdb90e7944047"
   integrity sha512-n/23IBOkrTKCfuUd6tFeRkn3lB2QZ3cmvoubRscR0JU/Zl4/ZyKmwnFmUv1/Fr+2GH/H8UTX59kEKDYYg3dMgA==
 
+react-native-simple-dialogs@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-1.2.1.tgz#37f63243b7c91ba303eeb3d8f2ba23eb81fb6926"
+  integrity sha512-oceCB2LCXP0HiIbOvddXIbJr+Cv7xL43U0H3YiySRpMlz/7EWu87mMbTgmfrNbb5uhw+k1tnDuzjqqrArAKy9w==
+
 react-native-status-bar-height@^2.2.0, react-native-status-bar-height@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.5.0.tgz#bc0fb85230603850aab9667ee8111a62954de90c"

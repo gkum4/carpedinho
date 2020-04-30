@@ -41,15 +41,30 @@ const Timeline = () => {
           </View>
 
           <View style={styles.buttonsContainer}>
-            <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate('Feeling2')}>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => navigation.navigate('Feeling2', {
+                expression: 'happy'
+              })}
+            >
               <Image source={felizIcon} style={styles.expressionIcon}/>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate('Feeling2')}>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => navigation.navigate('Feeling2', {
+                expression: 'neutral'
+              })}
+            >
               <Image source={neutroIcon} style={styles.expressionIcon}/>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate('Feeling2')}>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => navigation.navigate('Feeling2', {
+                expression: 'sad'
+              })}
+            >
               <Image source={tristeIcon} style={styles.expressionIcon}/>
             </TouchableOpacity>
           </View>

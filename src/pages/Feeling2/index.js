@@ -5,6 +5,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Image,
+  ScrollView,
 } from 'react-native'
 
 import backgroundImage from '../../assets/backgroundImage.png'
@@ -17,40 +18,31 @@ import { useNavigation } from '@react-navigation/native'
 
 import Slider from '@react-native-community/slider';
 
-const Timeline = () => {
-  const navigation = useNavigation();
-  const [sliderValue, setSliderValue] = useState(0);
+import { sadFeelings, happyFeelings, neutralFeelings } from '../../data';
 
-  const list = [
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-    {
-      emotion: 'Feliz',
-      description: 'Quando....',
-    },
-  ]
+const Timeline = ({ route }) => {
+  const navigation = useNavigation();
+
+  const { expression } = route.params;
+
+  const data = {
+    happy: [...happyFeelings],
+    neutral: [...neutralFeelings],
+    sad: [...sadFeelings],
+  };
+
+  data.happy.forEach((item, index) => {
+    data.happy[index].intensity = 0;
+  });
+
+  data.neutral.forEach((item, index) => {
+    data.neutral[index].intensity = 0;
+  });
+
+  data.sad.forEach((item, index) => {
+    data.sad[index].intensity = 0;
+  });
+
 
   return (
     <>
@@ -69,41 +61,47 @@ const Timeline = () => {
             </View>
           </View>
 
-          <View style={styles.itemContainer}>
-            <Slider
-              style={{width: '100%', height: '100%', zIndex: 3, position: 'absolute'}}
-              minimumValue={0}
-              maximumValue={100}
-              value={sliderValue}
-              onValueChange={(value) => setSliderValue(value)}
-              minimumTrackTintColor="#00000000"
-              maximumTrackTintColor="#00000000"
-              thumbTintColor="#00000000"
-            />
+          <ScrollView>
+            {data[expression].map((item) => {
+              const [sliderState, setSliderState] = useState(0);
+              return (
+                <View style={styles.itemContainer} key={item.type}>
+                  <Slider
+                    style={{width: '100%', height: '100%', zIndex: 3, position: 'absolute'}}
+                    minimumValue={0}
+                    maximumValue={100}
+                    value={sliderState}
+                    onValueChange={(value) => {
+                      setSliderState(value);
+                    }}
+                    minimumTrackTintColor="#00000000"
+                    maximumTrackTintColor="#00000000"
+                    thumbTintColor="#00000000"
+                  />
 
-            <View style={styles.itemContentContainer}>
-              <Icon name='circle-o' size={50} color="#fff" />
-              <Text style={styles.itemText}>
-                Resiliência
-              </Text>
-            </View>
+                  <View style={styles.itemContentContainer}>
+                    <Image source={item.imgSrc} style={{width: 40, height: 40}}/>
+                    <Text style={styles.itemText}>
+                      {item.type}
+                    </Text>
+                  </View>
 
-            <View style={styles.itemRightContainer}>
-              <TouchableOpacity
-                style={styles.itemQuestionMarkContainer}
-                onPress={() => console.log('Button pressed')}
-              >
-                <Icon name="question" size={20} color="#fff"/>
-              </TouchableOpacity>
-            </View>
+                  <View style={styles.itemRightContainer}>
+                    <TouchableOpacity
+                      style={styles.itemQuestionMarkContainer}
+                      onPress={() => console.log('Button pressed')}
+                    >
+                      <Icon name="question" size={20} color="#fff"/>
+                    </TouchableOpacity>
+                  </View>
 
-            <View
-              style={[styles.itemColorContainer, {width: `${sliderValue}%`}]}
-            />
-          </View>
-
-
-
+                  <View
+                    style={[styles.itemColorContainer, {width: `${sliderState}%`}]}
+                  />
+                </View>
+              );
+            })}
+          </ScrollView>
 
 
           {/* <FlatList
