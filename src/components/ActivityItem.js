@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -8,23 +8,31 @@ export default function ActivityItem({
   id,
   onDelete,
   onPress,
+  canErase,
 }) {
+  const [isDone, setIsDone] = useState(done)
   return (
-    <View style={styles.activitiesListItemContainer}>
-      {done ? (
-          <TouchableOpacity>
+    <View style={styles.activitiesListItemContainer} >
+      {isDone ? (
+          <TouchableOpacity onPress={() => setIsDone(false)}>
             <Icon name="check-circle" size={30} style={{ marginRight: 10 }} color="#fff"/>
           </TouchableOpacity>
         )
         : (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setIsDone(true)}>
             <Icon name="circle-o" size={30} style={{ marginRight: 10 }} color="#fff"/>
           </TouchableOpacity>
         )}
       <Text style={styles.activitiesListItemText}>{title}</Text>
-      <View style={styles.activitiesListItemTrashContainer}>
-        <Icon name='trash-o' size={20} color="#fff"/>
-      </View>
+      {canErase ? (
+        <View style={styles.activitiesListItemTrashContainer}>
+          <Icon name='trash-o' size={20} color="#fff"/>
+        </View>
+      ) : (
+        <View style={styles.activitiesListItemTrashContainer}>
+        </View>
+      ) }
+
     </View>
   );
 }

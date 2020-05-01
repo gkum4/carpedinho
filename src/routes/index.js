@@ -10,6 +10,8 @@ import Feeling from '../pages/Feeling';
 import Feeling2 from '../pages/Feeling2';
 import NoteEdit from '../pages/NoteEdit';
 
+import MyPatients from '../pagesPsychologist/MyPatients';
+import AddNewPatient from '../pagesPsychologist/AddNewPatient';
 import PatientMenu from '../pagesPsychologist/PatientMenu';
 import PatientStatistics from '../pagesPsychologist/PatientStatistics';
 import PatientRecommendations from '../pagesPsychologist/PatientRecommendations';
@@ -35,6 +37,8 @@ const Routes = () => {
       <Stack.Screen name="Feeling2" component={Feeling2} />
       <Stack.Screen name="NoteEdit" component={NoteEdit} />
 
+      <Stack.Screen name="MyPatients" component={MyPatients} />
+      <Stack.Screen name="AddNewPatient" component={AddNewPatient} />
       <Stack.Screen name="PatientMenu" component={PatientMenu} />
       <Stack.Screen name="PatientStatistics" component={PatientStatistics} />
       <Stack.Screen name="PatientRecommendations" component={PatientRecommendations} />

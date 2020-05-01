@@ -45,7 +45,7 @@ export default function NoteCard({
       </View>
       <View style={styles.listItemBottomContainer}>
         <View style={styles.listItemBottomLeftContainer}>
-          <Text style={styles.listItemNoteText}>{truncateString(note)}</Text>
+          <Text style={styles.listItemNoteText}>{truncateString(note, 80)}</Text>
         </View>
         <View style={styles.listItemBottomRightContainer}>
           <Icon name="microphone" color={'#fff'} size={20} />

@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   userIdText: {
     color: 'rgba(255,255,255,0.166)',
-    fontSize: 8,
+    fontSize: 11,
     fontWeight: 'bold',
   }
 })

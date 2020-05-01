@@ -11,8 +11,10 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-const PatientMenu = () => {
+const PatientMenu = ({ route }) => {
   const navigation = useNavigation();
+
+  const {patientName} = route.params;
 
   return (
     <>
@@ -27,7 +29,7 @@ const PatientMenu = () => {
               <Icon name="arrow-left" size={40} color="#fff"/>
             </TouchableOpacity>
             <View style={styles.titleContainer}>
-              <Text style={styles.titleText}>João</Text>
+              <Text style={styles.titleText}>{patientName}</Text>
             </View>
           </View>
 

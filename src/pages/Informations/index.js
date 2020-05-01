@@ -43,16 +43,20 @@ const Informations = () => {
               secureTextEntry={true}
               style={styles.input}
               placeholderTextColor="#cecece"
+              keyboardType="number-pad"
+              maxLength={4}
             />
           </View>
 
-          <View style={styles.containerCheckBox}>
+          <TouchableOpacity
+            style={styles.containerCheckBox}
+            onPress={() => checked ? setChecked(false) : setChecked(true)}
+          >
             <View style={styles.checkBoxIconContainer}>
               <CheckBox
                 checkedIcon={<Icon name="check-circle" size={20} color="#fff" />}
                 uncheckedIcon={<Icon name="circle-o" size={20} color="#fff" />}
                 checked={checked}
-                onPress={() => checked ? setChecked(false) : setChecked(true)}
               />
             </View>
             <View style={styles.checkBoxTextContainer}>
@@ -60,9 +64,9 @@ const Informations = () => {
                 Marque essa opcão caso seja psicólogo e deseje utilizar o aplicativo para fins de tratamento aos seus pacientes
               </Text>
             </View>
-          </View>
+          </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => checked ? navigation.navigate('PatientMenu') : navigation.navigate('Lock')}
+            onPress={() => checked ? navigation.navigate('MyPatients') : navigation.navigate('Lock')}
             style={styles.containerButton}
           >
             <Text style={styles.containerText3}>Feito</Text>

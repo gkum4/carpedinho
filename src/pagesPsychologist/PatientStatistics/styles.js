@@ -27,6 +27,27 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
   },
+  expressionsButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  expressionButtonContainer: {
+    padding: 5,
+    borderRadius: 8,
+  },
+  centerExpressionButtonContainer: {
+    marginHorizontal: 15,
+    padding: 5,
+    borderRadius: 8,
+  },
+  barsContainer: {
+    backgroundColor: 'rgba(255,255,255,0.166)',
+    borderRadius: 8,
+    padding: 15,
+    marginBottom: 30
+  },
   itemContainer: {
     flexDirection: 'row',
     height: 80,
@@ -62,7 +83,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   itemPercentageBarContainer: {
-    backgroundColor: '#828282',
+    backgroundColor: 'rgba(255,255,255,0.166)',
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -74,6 +95,36 @@ const styles = StyleSheet.create({
     fontSize: 11,
     fontWeight: 'bold',
   },
+  recommendationsFrequencyTable: {
+    padding: 15,
+    backgroundColor: 'rgba(255,255,255,0.166)',
+    borderRadius: 8,
+    width: '100%',
+  },
+  recommendationsFrequencyTableTitleContainer: {
+    flexDirection: 'row',
+    height: 30,
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 10,
+  },
+  recommendationsFrequencyTableTitleText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 21,
+  },
+  recommendationsFrequencyTableItemContainer: {
+    height: 20,
+    marginBottom: 15,
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingRight: 7,
+  },
+  recommendationsFrequencyTableItemText: {
+    color: '#fff',
+    fontSize: 14,
+  }
 });
 
 export default styles;

@@ -5,437 +5,188 @@ export const timelineData = [
     star: false,
     note: true,
     activities: true,
-    colors: ['#2196F3', '#43A047', '#e53935'],
+    colors: ['#C5C4C1', '#F0E68C', '#6495ED'],
   },
   {
-    date: '12 de Abril',
+    date: '17 de Maio',
     id: '1',
     star: false,
     note: true,
     activities: false,
-    colors: ['#212121', '#43A047'],
+    colors: ['#6495ED', '#C5C4C1'],
   },
   {
-    date: '11 de Abril',
+    date: '15 de Maio',
+    id: '1',
+    star: false,
+    note: true,
+    activities: false,
+    colors: ['#6495ED', '#F0E68C'],
+  },
+  {
+    date: '14 de Maio',
+    id: '1',
+    star: false,
+    note: true,
+    activities: false,
+    colors: ['#C5C4C1', '#F0E68C'],
+  },
+  {
+    date: '13 de Maio',
+    id: '1',
+    star: false,
+    note: true,
+    activities: false,
+    colors: ['#6495ED', '#F0E68C'],
+  },
+  {
+    date: '11 de Maio',
     id: '2',
     star: false,
     note: true,
     activities: true,
-    colors: ['#e53935'],
+    colors: ['#6495ED'],
   },
   {
-    date: '10 de Abril',
+    date: '10 de Maio',
     id: '3',
     star: false,
     note: true,
     activities: true,
-    colors: ['#43A047'],
+    colors: ['#F0E68C'],
   },
   {
-    date: '9 de Abril',
+    date: '9 de Maio',
     id: '4',
     star: false,
     note: false,
     activities: true,
-    colors: ['#2196F3', '#FFEB3B'],
-  },
-  {
-    date: '12 de Abril',
-    id: '5',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '6',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '7',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '8',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '9',
-
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '10',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '11',
-
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '12',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
-  },
-  {
-    date: '12 de Abril',
-    id: '13',
-    star: false,
-    note: true,
-    activities: false,
-    colors: ['#212121', '#43A047'],
+    colors: ['#C5C4C1', '#F0E68C'],
   },
 ]
 
-export const daysData = [
-  {
-    id: 0,
-    date: '12 de Abril',
-    notes: [
-      {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
-        id: '0',
-      },
-    ],
-    activities: {
-      mine: [],
+export const daysData = {
+  notes: [
+    {
+      title: 'Futebol',
+      note:
+        'Hoje joguei futebol com meus amigos, foi muito bom para poder relaxar',
+      emotions: ['#F0E68C'],
+      id: '0',
     },
-  },
+    {
+      title: 'Discussão',
+      note:
+        'Discuti com meu pai depois de voltar para casa, ele tinha tido um dia duro no trabalho e acabou descontando um stress dele em mim.',
+      emotions: ['#6495ED'],
+      id: '1',
+    },
+    {
+      title: 'Quarentena',
+      note:
+        'Essa quarentena ta muito chaaaata. Não aguento mais não poder sair de casa e passar o dia inteiro vendo Netflix',
+      emotions: ['#C5C4C1'],
+      id: '2',
+    },
+    {
+      title: 'Sonho de hoje',
+      note:
+        'Hoje sonhei que estava voando, sentindo o vento no rosto e vendo a minha cidade lá de cima. Infelimente acordei e percebi que era somente um sonho.',
+      emotions: ['#F0E68C'],
+      id: '3',
+    },
 
-  {
-    date: '11 de Abril',
-    notes: [
+  ],
+  activities: {
+    mine: [
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
+        title: 'Joguei futebol',
+        done: true,
         id: '0',
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
+        title: 'Comi pizza',
+        done: true,
         id: '1',
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
+        title: 'Liguei para meus amigos',
+        done: false,
         id: '2',
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
+        title: 'Assisti um filme',
+        done: false,
         id: '3',
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
+        title: 'Fiz 30 minutos de corrida',
+        done: false,
         id: '4',
       },
+    ],
+    recommended: [
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
-        id: '5',
+        title: 'Falar com seu irmão',
+        done: false,
+        id: 0,
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
-        id: '6',
+        title: 'Exercitar-se',
+        done: false,
+        id: 1,
       },
       {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
-        id: '7',
+        title: 'Escrever emoções',
+        done: false,
+        id: 2,
+      },
+      {
+        title: 'Meditar',
+        done: false,
+        id: 3,
+      },
+      {
+        title: 'Conversar com família',
+        done: false,
+        id: 4,
+      },
+      {
+        title: 'Passear com cachorro',
+        done: false,
+        id: 5,
       },
     ],
-    activities: {
-      mine: [
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '2',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '3',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '4',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '5',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '6',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '7',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '8',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '9',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '10',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '11',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '12',
-        },
-      ],
-      recommended: [
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: false,
-          id: '2',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '3',
-        },
-      ],
-    },
+  },
+};
+
+export const recommendationsFrequencyData = [
+  {
+    title: 'Falar com seu irmão',
+    timesDone: 7,
+  },
+  {
+    title: 'Exercitar-se',
+    timesDone: 2,
+  },
+  {
+    title: 'Escrever emoções',
+    timesDone: 5,
+  },
+  {
+    title: 'Meditar',
+    timesDone: 12,
+  },
+  {
+    title: 'Conversar com família',
+    timesDone: 3,
+  },
+  {
+    title: 'Passear com cachorro',
+    timesDone: 7,
   },
 
-  {
-    date: '10 de Abril',
-    notes: [
-      {
-        title: 'Futebol',
-        note:
-          'Hoje joguei futebol com meus amigos, foi muito bom para poder desestressar',
-        emotions: ['#43A047', '#212121'],
-        id: '0',
-      },
-    ],
-    activities: {
-      mine: [
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '2',
-        },
-      ],
-      recommended: [
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: false,
-          id: '2',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '3',
-        },
-      ],
-    },
-  },
-
-  {
-    date: '9 de Abril',
-    activities: {
-      mine: [
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Joguei futebol',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Joguei futebol',
-          done: false,
-          id: '2',
-        },
-      ],
-      recommended: [
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '0',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '1',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: false,
-          id: '2',
-        },
-        {
-          title: 'Falar com seu irmão',
-          done: true,
-          id: '3',
-        },
-      ],
-    },
-  },
-]
-
-export const statistics = [
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '100%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Vulnerabilidade',
-    color: '#0429ec',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '0%',
-    numberOfTimes: 0,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-  {
-    emotion: 'Alegria',
-    color: '#FFEB3B',
-    percentage: '10%',
-    numberOfTimes: 5,
-  },
-]
+];
 
 export const happyFeelings = [
   {

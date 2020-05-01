@@ -9,13 +9,6 @@ import backgroundImage from '../../assets/backgroundImage.png'
 import audioController from '../../components/audioController.png'
 import styles from './styles'
 
-
-
-
-
-
-
-
 const NoteEdit = ({ route }) => {
   const navigation = useNavigation()
 

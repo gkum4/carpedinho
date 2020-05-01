@@ -21,7 +21,9 @@ import styles from './styles'
 import { daysData } from '../../data'
 
 import { useNavigation } from '@react-navigation/native'
+
 import ActionButton from 'react-native-action-button'
+
 import { ScrollView } from 'react-native-gesture-handler'
 
 const Day = ({ route }) => {
@@ -31,13 +33,11 @@ const Day = ({ route }) => {
 
   const { date } = route.params
 
-  const data = daysData.find(item => item.date === date)
-
   const Content = () => {
     if (sectionPressed === 'notas') {
       return (
         <FlatList
-          data={data.notes}
+          data={daysData.notes}
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}
           ListFooterComponent={() => <View style={{ height: 100 }} />}
@@ -72,7 +72,7 @@ const Day = ({ route }) => {
           >
             <View style={{ flex: 1 }}>
               <FlatList
-                data={!!data.activities.mine ? data.activities.mine : []}
+                data={daysData.activities.mine}
                 keyExtractor={item => item.id}
                 showsVerticalScrollIndicator={false}
                 style={{ width: '100%', height: '100%', flex: 1 }}
@@ -86,6 +86,7 @@ const Day = ({ route }) => {
                     title={item.title}
                     done={item.done}
                     id={item.id}
+                    canErase={true}
                   />
                 )}
               />
@@ -102,7 +103,7 @@ const Day = ({ route }) => {
 
             <View style={{ flex: 1 }}>
               <FlatList
-                data={!!data.activities.recommended ? data.activities.recommended : []}
+                data={daysData.activities.recommended}
                 keyExtractor={item => item.id}
                 style={{ width: '100%', height: '100%', flex: 1 }}
                 ListHeaderComponent={() => (
@@ -118,6 +119,7 @@ const Day = ({ route }) => {
                     title={item.title}
                     done={item.done}
                     id={item.id}
+                    canErase={false}
                   />
                 )}
               />
