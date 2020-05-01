@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
-    marginBottom: 20,
+    justifyContent:'space-between'
   },
   titleContainer: {
     justifyContent: 'center',

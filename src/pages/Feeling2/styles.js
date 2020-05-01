@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
-    marginBottom: 20,
+    paddingVertical:15,
   },
   titleContainer: {
     justifyContent: 'center',
