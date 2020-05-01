@@ -14,7 +14,11 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+<<<<<<< HEAD
     marginBottom: 20,
+=======
+    justifyContent:'space-between'
+>>>>>>> 462aeb2b6702eb089ea61c674af400cdd64f7217
   },
   titleContainer: {
     justifyContent: 'center',
@@ -23,7 +27,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   titleText: {
-    fontSize: 27,
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
   },
@@ -37,6 +41,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
+  },
+  skipButton : {
+    backgroundColor: '#03A9F4',
+    paddingHorizontal:10,
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:8,
+  },
+  skipButtonText : {
+    color:'white'
   },
   expressionIcon: {
     width: 100,

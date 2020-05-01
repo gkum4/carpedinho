@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
   },
   containerCheckBox: {
     marginTop: 10,
+    marginHorizontal:20,
     flexDirection: 'row',
   },
   checkBoxIconContainer: {
@@ -48,24 +49,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   checkBoxTextContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    margin:10,
   },
   checkBoxText: {
     color:'#FFFFFF',
     marginHorizontal: 5,
     fontSize: 14,
-    textAlign:'center',
+    textAlign:'justify',
   },
   containerButton: {
     marginTop: 40,
     backgroundColor: '#03A9F4',
-    paddingVertical: 8,
+    alignItems:'center',
+    justifyContent:'center',
+    width:'100%',
+    paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,
   },
   containerText3: {
     color:'#fff',
+    fontWeight:'bold',
     fontSize: 18,
   }
 });

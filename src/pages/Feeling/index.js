@@ -50,6 +50,12 @@ const Feeling = ({ route }) => {
                 <Text style={styles.nextButtonText}>Pular</Text>
               </TouchableOpacity>
             </View>
+            <TouchableOpacity
+                    style={styles.skipButton}
+                    onPress={() => {}}
+                  >
+                    <Text style={styles.skipButtonText}>Pular</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.titleContainer}>

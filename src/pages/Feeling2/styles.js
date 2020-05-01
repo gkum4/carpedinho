@@ -14,7 +14,11 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+<<<<<<< HEAD
     marginBottom: 20,
+=======
+    paddingVertical:15,
+>>>>>>> 462aeb2b6702eb089ea61c674af400cdd64f7217
   },
   titleContainer: {
     justifyContent: 'center',
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   titleText: {
-    fontSize: 27,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
   },

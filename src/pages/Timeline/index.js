@@ -24,10 +24,11 @@ const Timeline = () => {
       <FlatList
         data={timelineData}
         keyExtractor={item => item.id}
+        showsVerticalScrollIndicator={false}
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
             <Text style={styles.titleText}>Minha Timeline</Text>
-            <Text style={styles.userIdText}>Seu ID: 912831824972</Text>
+            <Text style={styles.userIdText}>Seu ID: @joaodasneves</Text>
           </View>
         )}
         renderItem={({ item }) => (
@@ -50,9 +51,9 @@ const Timeline = () => {
                 <Text style={styles.listItemText}>{item.date}</Text>
                 <View style={styles.listItemIconsContainer}>
                   {item.note && (
-                    <Icon name="book" size={20} style={{ marginLeft: 10 }} color="#484848"/>
+                    <Icon name="book" size={20} style={{ marginLeft: 10 }} color="#E0E0E0"/>
                   )}
-                  {item.activities && <Icon name="list" size={20} color="#484848"/>}
+                  {item.activities && <Icon name="list" size={20} color="#E0E0E0"/>}
                 </View>
               </View>
 
