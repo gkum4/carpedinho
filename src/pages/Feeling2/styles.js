@@ -14,12 +14,14 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+    marginBottom: 20,
   },
   titleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
     width: '100%',
+    marginBottom: 20,
   },
   titleText: {
     fontSize: 27,
@@ -29,9 +31,9 @@ const styles = StyleSheet.create({
   itemContainer: {
     height: 70,
     width: '100%',
-    marginTop: 20,
     backgroundColor: 'rgba(255,255,255,0.166)',
     borderRadius: 8,
+    marginBottom: 20,
   },
   itemColorContainer: {
     height: '100%',
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
   itemQuestionMarkContainer: {
     height: 35,
     width: 35,
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: 'rgba(255,255,255,0.166)',
     borderRadius: 17.5,
     justifyContent: 'center',
     alignItems: 'center',
@@ -70,6 +72,44 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     marginLeft: 15,
+  },
+  dialogContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  dialogTitleText: {
+    fontWeight: 'bold',
+    fontSize: 21,
+    color: '#fff',
+    marginTop: 10,
+    marginBottom: 15
+  },
+  dialogDescriptionText: {
+    fontSize: 14,
+    color: '#fff',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
+  dialogButtonContainer: {
+    backgroundColor: '#03A9F4',
+    paddingVertical: 8,
+    paddingHorizontal: 25,
+    borderRadius: 8,
+  },
+  dialogButtonText: {
+    color: '#fff',
+    fontSize: 14,
+  },
+  nextButtonContainer: {
+    backgroundColor: '#03A9F4',
+    paddingVertical: 8,
+    paddingHorizontal: 25,
+    borderRadius: 8,
+  },
+  nextButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 })
 

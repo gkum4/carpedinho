@@ -20,8 +20,10 @@ import felizIcon from '../../assets/expressions/felizIcon.png';
 import neutroIcon from '../../assets/expressions/neutroIcon.png';
 import tristeIcon from '../../assets/expressions/tristeIcon.png';
 
-const Timeline = () => {
+const Feeling = ({ route }) => {
   const navigation = useNavigation()
+
+  const { date } = route.params;
 
   return (
     <>
@@ -35,15 +37,30 @@ const Timeline = () => {
             >
               <Icon name="arrow-left" size={40} color="#fff" />
             </TouchableOpacity>
-            <View style={styles.titleContainer}>
-              <Text style={styles.titleText}>Como você está?</Text>
+            <View style={{flex: 1, flexDirection:'row-reverse', alignItems: 'center'}}>
+              <TouchableOpacity
+                style={styles.nextButtonContainer}
+                onPress={() => navigation.navigate('NoteEdit', {
+                  date: date,
+                  title: '',
+                  description: '',
+                  feelingsData: [],
+                })}
+              >
+                <Text style={styles.nextButtonText}>Pular</Text>
+              </TouchableOpacity>
             </View>
+          </View>
+
+          <View style={styles.titleContainer}>
+              <Text style={styles.titleText}>Como você está?</Text>
           </View>
 
           <View style={styles.buttonsContainer}>
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => navigation.navigate('Feeling2', {
+                date: date,
                 expression: 'happy'
               })}
             >
@@ -53,6 +70,7 @@ const Timeline = () => {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => navigation.navigate('Feeling2', {
+                date: date,
                 expression: 'neutral'
               })}
             >
@@ -62,6 +80,7 @@ const Timeline = () => {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => navigation.navigate('Feeling2', {
+                date: date,
                 expression: 'sad'
               })}
             >
@@ -75,4 +94,4 @@ const Timeline = () => {
   )
 }
 
-export default Timeline
+export default Feeling;

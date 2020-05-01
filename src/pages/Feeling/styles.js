@@ -14,12 +14,13 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+    marginBottom: 20,
   },
   titleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1,
     width: '100%',
+    marginBottom: 20,
   },
   titleText: {
     fontSize: 27,
@@ -28,7 +29,6 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flex: 1,
-    paddingTop: 15,
   },
   buttonContainer: {
     flex: 1,
@@ -41,7 +41,18 @@ const styles = StyleSheet.create({
   expressionIcon: {
     width: 100,
     height: 100,
-  }
+  },
+  nextButtonContainer: {
+    backgroundColor: '#03A9F4',
+    paddingVertical: 8,
+    paddingHorizontal: 25,
+    borderRadius: 8,
+  },
+  nextButtonText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
 })
 
 export default styles

@@ -48,8 +48,10 @@ const Day = ({ route }) => {
               emotions={item.emotions}
               onPress={() =>
                 navigation.navigate('NoteEdit', {
+                  date: date,
                   title: item.title,
                   description: item.note,
+                  feelingsData: [],
                 })
               }
             />
@@ -187,7 +189,9 @@ const Day = ({ route }) => {
             buttonColor="#03A9F4"
             onPress={() => {
               console.log('Adicionar nova nota');
-              navigation.navigate('Feeling');
+              navigation.navigate('Feeling', {
+                date: date,
+              });
             }}
           />
         )}
