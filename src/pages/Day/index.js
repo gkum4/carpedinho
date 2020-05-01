@@ -31,7 +31,7 @@ const Day = ({ route }) => {
 
   const [sectionPressed, setSectionPressed] = useState('notas')
 
-  const { date } = route.params
+  const { date, who } = route.params
 
   const Content = () => {
     if (sectionPressed === 'notas') {
@@ -48,10 +48,11 @@ const Day = ({ route }) => {
               emotions={item.emotions}
               onPress={() =>
                 navigation.navigate('NoteEdit', {
+                  who: who,
                   date: date,
                   title: item.title,
                   description: item.note,
-                  feelingsData: [],
+                  feelingsData: item.feelings,
                 })
               }
             />
@@ -186,12 +187,13 @@ const Day = ({ route }) => {
           </View>
           <Content />
         </View>
-        {sectionPressed === 'notas' && (
+        {(sectionPressed === 'notas' && who !== 'psychologist') && (
           <ActionButton
             buttonColor="#03A9F4"
             onPress={() => {
               console.log('Adicionar nova nota');
               navigation.navigate('Feeling', {
+                who: who,
                 date: date,
               });
             }}

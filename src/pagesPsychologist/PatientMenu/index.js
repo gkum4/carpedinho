@@ -14,7 +14,7 @@ import styles from './styles';
 const PatientMenu = ({ route }) => {
   const navigation = useNavigation();
 
-  const {patientName} = route.params;
+  const { patientName, who } = route.params;
 
   return (
     <>
@@ -44,13 +44,18 @@ const PatientMenu = ({ route }) => {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => navigation.navigate('PatientRecommendations')}
+              onPress={() => navigation.navigate('PatientRecommendations', {
+                patientName: patientName,
+              })}
             >
               <Icon name="list" size={70} color="#fff" />
               <Text style={styles.buttonText}>Recomendações</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => navigation.navigate('Timeline', { who: who, patientName: patientName })}
+            >
               <Icon name="calendar" size={70} color="#fff" />
               <Text style={styles.buttonText}>Timeline</Text>
             </TouchableOpacity>

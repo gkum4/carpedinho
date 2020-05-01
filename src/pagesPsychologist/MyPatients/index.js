@@ -106,8 +106,10 @@ function Item({ title , pontos, img, onPress}) {
   );
 }
 
-export default function myPatients(props) {
+export default function myPatients({ route }) {
   const navigation = useNavigation();
+
+  const { who } = route.params;
 
   return (
     <ImageBackground source={backgroundImage} style={styles.imageBackground} >
@@ -126,6 +128,7 @@ export default function myPatients(props) {
               title={item.title}
               img={item.img}
               onPress={() => navigation.navigate('PatientMenu', {
+                who: who,
                 patientName: item.title,
               })}
             />

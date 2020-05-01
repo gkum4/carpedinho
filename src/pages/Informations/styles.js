@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   imageBackground: {
     flex: 1,
     flexDirection: 'column',
+    paddingTop: 15 + getStatusBarHeight(),
   },
   container: {
     flex: 1,
@@ -71,7 +72,22 @@ const styles = StyleSheet.create({
     color:'#fff',
     fontWeight:'bold',
     fontSize: 18,
-  }
+  },
+  buttonContainer: {
+    flex: 1,
+    marginHorizontal: 15,
+    marginBottom: 15,
+    borderRadius: 8,
+    backgroundColor: 'rgba(255,255,255,0.166)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    marginTop: 15,
+    fontSize: 27,
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;

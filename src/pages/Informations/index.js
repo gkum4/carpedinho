@@ -14,7 +14,21 @@ const Informations = () => {
   return (
     <ImageBackground source={imageBackground} style={styles.imageBackground} >
 
-      <ScrollView style={styles.scrollViewContainer}>
+      <View style={{alignItems: 'center', justifyContent: 'center', width: '100%', height: 80, marginTop: 15}}>
+        <Image source={logo} style={{width: 70, height: 70, marginBottom: 30}} />
+      </View>
+
+      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate('Lock', { who: 'patient' })}>
+        <Icon name="user" color="#fff" size={100} />
+        <Text style={styles.buttonText}>Sou usuário</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate('MyPatients', { who: 'psychologist' })}>
+        <Icon name="user-o" color="#fff" size={100} />
+        <Text style={styles.buttonText}>Sou psicólogo</Text>
+      </TouchableOpacity>
+
+      {/* <ScrollView style={styles.scrollViewContainer}>
         <View style={styles.container}>
 
           <Image source={logo} style={{ width: 80, height: 80, marginBottom: 20 }} />
@@ -66,14 +80,14 @@ const Informations = () => {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => checked ? navigation.navigate('MyPatients') : navigation.navigate('Lock')}
+            onPress={() => checked ? navigation.navigate('MyPatients', { who: 'psychologist' }) : navigation.navigate('Lock', { who: 'patient' })}
             style={styles.containerButton}
           >
             <Text style={styles.containerText3}>Feito</Text>
           </TouchableOpacity>
 
         </View>
-      </ScrollView>
+      </ScrollView> */}
 
   </ImageBackground>
   );

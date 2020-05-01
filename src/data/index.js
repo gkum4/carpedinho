@@ -9,7 +9,7 @@ export const timelineData = [
   },
   {
     date: '17 de Maio',
-    id: '1',
+    id: '11',
     star: false,
     note: true,
     activities: false,
@@ -17,7 +17,7 @@ export const timelineData = [
   },
   {
     date: '15 de Maio',
-    id: '1',
+    id: '12',
     star: false,
     note: true,
     activities: false,
@@ -25,7 +25,7 @@ export const timelineData = [
   },
   {
     date: '14 de Maio',
-    id: '1',
+    id: '13',
     star: false,
     note: true,
     activities: false,
@@ -33,7 +33,7 @@ export const timelineData = [
   },
   {
     date: '13 de Maio',
-    id: '1',
+    id: '14',
     star: false,
     note: true,
     activities: false,
@@ -41,7 +41,7 @@ export const timelineData = [
   },
   {
     date: '11 de Maio',
-    id: '2',
+    id: '25',
     star: false,
     note: true,
     activities: true,
@@ -73,6 +73,25 @@ export const daysData = {
         'Hoje joguei futebol com meus amigos, foi muito bom para poder relaxar',
       emotions: ['#F0E68C'],
       id: '0',
+      feelings: [
+        {
+          type: `Alegria`,
+          description: `Condição de satisfação da pessoa que está contente, alegre.`,
+          imgSrc: require('../assets/feelings/alegria.png'),
+          intensity: 80,
+        },
+        {
+          type: `Bem-estar`,
+          description: `Estado da pessoa tranquila, de quem está seguro ou confortável; tranquilidade.`,
+          imgSrc: require('../assets/feelings/bem-estar.png'),
+          intensity: 90,
+        },
+      ],
+      photos: [
+        {
+          uri: require('../assets/notes/futebolImage.jpg'),
+        }
+      ]
     },
     {
       title: 'Discussão',
@@ -80,6 +99,22 @@ export const daysData = {
         'Discuti com meu pai depois de voltar para casa, ele tinha tido um dia duro no trabalho e acabou descontando um stress dele em mim.',
       emotions: ['#6495ED'],
       id: '1',
+      feelings: [
+        {
+          type: `Tristeza`,
+          description: `um triste arrependimento; angústia causada por perda, decepção ou pesar; sentir ou expressar tristeza, infelicidade.`,
+          imgSrc: require('../assets/feelings/tristeza.png'),
+          intensity: 60,
+        },
+        {
+          type: `Confusão`,
+          description: `um sentimento desorientado; pensamento nebuloso; caos; falta de nitidez ou clareza; perplexidade; um estado mental perturbado.`,
+          imgSrc: require('../assets/feelings/confusao.png'),
+          intensity: 90,
+        },
+      ],
+      photos: [],
+
     },
     {
       title: 'Quarentena',
@@ -87,6 +122,20 @@ export const daysData = {
         'Essa quarentena ta muito chaaaata. Não aguento mais não poder sair de casa e passar o dia inteiro vendo Netflix',
       emotions: ['#C5C4C1'],
       id: '2',
+      feelings: [
+        {
+          type: `Preguiça`,
+          description: `Lentidão em fazer qualquer coisa; morosidade.`,
+          imgSrc: require('../assets/feelings/preguica.png'),
+          intensity: 85,
+        },
+      ],
+      photos: [
+        {
+          uri: require('../assets/notes/netflixImage.jpg'),
+        },
+
+      ]
     },
     {
       title: 'Sonho de hoje',
@@ -94,6 +143,19 @@ export const daysData = {
         'Hoje sonhei que estava voando, sentindo o vento no rosto e vendo a minha cidade lá de cima. Infelimente acordei e percebi que era somente um sonho.',
       emotions: ['#F0E68C'],
       id: '3',
+      feelings: [
+        {
+          type: `Inspiração`,
+          description: `Algo ou alguém que inspira, que incita a capacidade de criação`,
+          imgSrc: require('../assets/feelings/inspiracao.png'),
+          intensity: 75,
+        },
+      ],
+      photos: [
+        {
+          uri: require('../assets/notes/acordarImage.jpg'),
+        }
+      ]
     },
 
   ],
@@ -129,32 +191,32 @@ export const daysData = {
       {
         title: 'Falar com seu irmão',
         done: false,
-        id: 0,
+        id: '0',
       },
       {
         title: 'Exercitar-se',
         done: false,
-        id: 1,
+        id: '1',
       },
       {
         title: 'Escrever emoções',
         done: false,
-        id: 2,
+        id: '2',
       },
       {
         title: 'Meditar',
         done: false,
-        id: 3,
+        id: '3',
       },
       {
         title: 'Conversar com família',
         done: false,
-        id: 4,
+        id: '4',
       },
       {
         title: 'Passear com cachorro',
         done: false,
-        id: 5,
+        id: '5',
       },
     ],
   },

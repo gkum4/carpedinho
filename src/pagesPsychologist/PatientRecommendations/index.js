@@ -38,8 +38,10 @@ const recommendationsData = [
   },
 ]
 
-const PatientRecommendations = () => {
+const PatientRecommendations = ({ route }) => {
   const navigation = useNavigation();
+
+  const { patientName } = route.params;
 
   return (
     <>
@@ -65,7 +67,7 @@ const PatientRecommendations = () => {
               style={{ flex: 1 }}
               ListHeaderComponent={() => (
                 <View style={styles.activitiesTitleContainer}>
-                  <Text style={styles.activitiesTitle}>Para João:</Text>
+                  <Text style={styles.activitiesTitle}>Para {patientName}:</Text>
                 </View>
               )}
               renderItem={({ item }) => (
@@ -80,7 +82,7 @@ const PatientRecommendations = () => {
           <ActionButton
             buttonColor="#03A9F4"
             onPress={() => {
-              console.log('Adicionar nova recomendação');
+              navigation.navigate('PatientAddRecommendation');
             }}
           />
 

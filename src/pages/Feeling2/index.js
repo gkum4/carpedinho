@@ -28,8 +28,7 @@ const Timeline = ({ route }) => {
   const [dialogVisible, setDialogVisible] = useState(false);
   const [dialogItem, setDialogItem] = useState({});
 
-  const { expression } = route.params;
-  const { date } = route.params;
+  const { expression, date, who } = route.params;
 
   const data = {
     happy: [...happyFeelings],
@@ -94,6 +93,7 @@ const Timeline = ({ route }) => {
             <TouchableOpacity
               style={styles.nextButtonContainer}
               onPress={() => navigation.navigate('NoteEdit', {
+                who: who,
                 date: date,
                 title: '',
                 description: '',

@@ -9,9 +9,11 @@ import styles from './styles';
 
 import { useNavigation } from '@react-navigation/native'
 
-export default function Lock() {
+export default function Lock({route}) {
 
   const [feito, setFeito] = useState(false);
+
+  const { who } = route.params;
 
   const navigation = useNavigation();
 
@@ -35,7 +37,7 @@ export default function Lock() {
           </View>
 
           <View style={styles.buttonContainer}>
-            <TouchableOpacity onPress={() => navigation.navigate('Timeline')} >
+            <TouchableOpacity onPress={() => navigation.navigate('Timeline', { who: who, patientName: '' })} >
               <Text style={styles.buttonText}>Feito</Text>
             </TouchableOpacity>
           </View>

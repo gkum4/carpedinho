@@ -22,7 +22,7 @@ import tristeIcon from '../../assets/expressions/tristeIcon.png';
 const Feeling = ({ route }) => {
   const navigation = useNavigation()
 
-  const { date } = route.params;
+  const { date, who } = route.params;
 
   return (
     <>
@@ -59,6 +59,7 @@ const Feeling = ({ route }) => {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => navigation.navigate('Feeling2', {
+                who: who,
                 date: date,
                 expression: 'happy'
               })}

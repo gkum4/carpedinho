@@ -8,11 +8,21 @@ import { RNVoiceRecorder } from 'react-native-voice-recorder'
 import backgroundImage from '../../assets/backgroundImage.png'
 import audioController from '../../components/audioController.png'
 import styles from './styles'
+import { Dialog } from 'react-native-simple-dialogs';
+
+import { daysData } from '../../data';
 
 const NoteEdit = ({ route }) => {
   const navigation = useNavigation()
 
-  const { date, feelingsData, title, description } = route.params
+  const { date, feelingsData, title, description, who } = route.params;
+
+  var photosOfTheNote = [];
+
+  if ( description !== '' ) {
+    photosOfTheNote = daysData.notes.find((item) => item.note === description).photos;
+  }
+
 
   const feelings = []
 
@@ -28,7 +38,38 @@ const NoteEdit = ({ route }) => {
   const [recordingPath, setRecordingPath] = useState('')
   const [isPlayerVisible, setPlayerVisible] = useState(false)
 
-  ImagePicker.showImagePicker
+  const [dialogVisible, setDialogVisible] = useState(false);
+  const [dialogItem, setDialogItem] = useState({});
+
+
+  function DescriptionDialog({ item }) {
+    return (
+      <Dialog
+        visible={dialogVisible}
+        onTouchOutside={() => setDialogVisible(false)}
+        dialogStyle={{borderRadius: 8, backgroundColor: '#00000080'}}
+        overlayStyle={{backgroundColor: 'rgba(0,0,0,0.70)'}}
+        animationType="fade"
+      >
+        <View style={styles.dialogContainer}>
+          <Image source={item.imgSrc} style={{width: 70, height: 70}} />
+          <Text style={styles.dialogTitleText}>{item.type}</Text>
+          <Text style={styles.dialogDescriptionText}>{item.description}</Text>
+          <TouchableOpacity
+            onPress={() => setDialogVisible(false)}
+            style={styles.dialogButtonContainer}
+          >
+            <Text style={styles.dialogButtonText}>OK</Text>
+          </TouchableOpacity>
+        </View>
+      </Dialog>
+    );
+  };
+
+  function handleQuestionMarkButtonPressed(item) {
+    setDialogItem(item);
+    setDialogVisible(true);
+  }
 
   const handleSelectImage = () => {
     ImagePicker.showImagePicker(
@@ -45,6 +86,7 @@ const NoteEdit = ({ route }) => {
           console.log('User canceled')
         } else {
           const source = { uri: response.uri }
+          console.log(source);
           const newImagesArr = [...images]
           newImagesArr.push(source)
           setImages(newImagesArr)
@@ -126,6 +168,7 @@ const NoteEdit = ({ route }) => {
                     autoCapitalize="sentences"
                     value={noteTitle}
                     onChangeText={text => setNoteTitle(text)}
+                    editable={who === 'psychologist' ? false : true}
                   />
                   <TextInput
                     style={styles.noteBodyTextInput}
@@ -136,6 +179,7 @@ const NoteEdit = ({ route }) => {
                     autoCapitalize="sentences"
                     value={noteDescription}
                     onChangeText={text => setNoteDescription(text)}
+                    editable={who === 'psychologist' ? false : true}
                   />
                 </View>
 
@@ -154,7 +198,7 @@ const NoteEdit = ({ route }) => {
                         maximumValue={100}
                         value={sliderState}
                         onValueChange={value => {
-                          setSliderState(value)
+                          who !== 'psychologist' && setSliderState(value);
                         }}
                         minimumTrackTintColor="#00000000"
                         maximumTrackTintColor="#00000000"
@@ -187,26 +231,28 @@ const NoteEdit = ({ route }) => {
                     </View>
                   )
                 })}
-                <View
-                  style={{
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    marginBottom: 30,
-                  }}
-                >
-                  <TouchableOpacity
-                    style={styles.addEmotionButton}
-                    onPress={() =>
-                      navigation.navigate('Feeling', {
-                        date: date,
-                      })
-                    }
+                {who !== 'psychologist' && (
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginBottom: 30,
+                    }}
                   >
-                    <Text style={styles.addEmotionButtonText}>
-                      Adicionar emocao
-                    </Text>
-                  </TouchableOpacity>
-                </View>
+                    <TouchableOpacity
+                      style={styles.addEmotionButton}
+                      onPress={() =>
+                        navigation.navigate('Feeling', {
+                          date: date,
+                        })
+                      }
+                    >
+                      <Text style={styles.addEmotionButtonText}>
+                        Adicionar emocao
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                )}
 
                 {isPlayerVisible && (
                   <View style={styles.audioContainer}>
@@ -216,6 +262,25 @@ const NoteEdit = ({ route }) => {
                     />
                   </View>
                 )}
+                {photosOfTheNote.map(item => (
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      backgroundColor: 'rgba(255,255,255,0.166)',
+                      borderRadius: 8,
+                      marginBottom: 15,
+                      height: 300,
+                      padding: 10,
+                    }}
+                  >
+                    <Image
+                      source={item.uri}
+                      resizeMode="contain"
+                      style={{ width: 280, height: 280 }}
+                    />
+                  </View>
+                ))}
                 {images.map(item => (
                   <View
                     style={{
@@ -235,27 +300,25 @@ const NoteEdit = ({ route }) => {
                     />
                   </View>
                 ))}
-
-                {/* {images.map((item) => (
-                    <View style={{height: 300, width: '100%', justifyContent: 'center', alignItems: 'center'}}>
-                      <Image source={{uri: item.uri}} resizeMode="contain" style={{width: 180, resizeMode: 'contain'}}/>
-                    </View>
-                  ))} */}
               </ScrollView>
             </View>
 
-            <View style={{ flexDirection: 'row' }}>
-              <TouchableOpacity onPress={() => _onRecord()} style={styles.micIconContainer}>
-                <Icon name="microphone" size={25} color="#fff" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.camIconContainer}
-                onPress={handleSelectImage}
-              >
-                <Icon name="camera" size={25} color="#fff" />
-              </TouchableOpacity>
-            </View>
+            {who !== 'psychologist' && (
+              <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity onPress={() => _onRecord()} style={styles.micIconContainer}>
+                  <Icon name="microphone" size={25} color="#fff" />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.camIconContainer}
+                  onPress={handleSelectImage}
+                >
+                  <Icon name="camera" size={25} color="#fff" />
+                </TouchableOpacity>
+              </View>
+            )}
           </View>
+
+          <DescriptionDialog item={dialogItem} />
         </KeyboardAvoidingView>
       </ImageBackground>
     </>

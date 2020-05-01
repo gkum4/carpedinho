@@ -17,8 +17,9 @@ import styles from './styles'
 import { timelineData } from '../../data'
 import { useNavigation } from '@react-navigation/native'
 
-const Timeline = () => {
-  const navigation = useNavigation()
+const Timeline = ({ route }) => {
+  const navigation = useNavigation();
+  const { who, patientName } = route.params
   const TimelineList = () => {
     return (
       <FlatList
@@ -27,12 +28,20 @@ const Timeline = () => {
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={() => (
           <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>Minha Timeline</Text>
-            <Text style={styles.userIdText}>Seu ID: @joaodasneves</Text>
+            {who === 'psychologist' && (
+              <TouchableOpacity
+                onPress={() => navigation.goBack()}
+              >
+                <Icon name="arrow-left" size={40} color="#fff"/>
+              </TouchableOpacity>
+            )}
+            <Text style={styles.titleText}>{who === 'psychologist' ? `${patientName} Timeline` : 'Timeline'}</Text>
+            {who !== 'psychologist' && <Text style={styles.userIdText}>Seu ID: @joaodasneves</Text>}
           </View>
         )}
         renderItem={({ item }) => (
           <TouchableOpacity onPress={() => navigation.navigate('Day', {
+              who: who,
               date: item.date,
             })}
           >

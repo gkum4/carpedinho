@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
+    marginBottom: 15,
   },
   titleContainer: {
     flexDirection: 'row-reverse',
@@ -50,9 +51,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#fff',
   },
+  noteBodyContainer: {
+    flex: 1,
+    minHeight: 200,
+    backgroundColor: 'rgba(255,255,255,0.166)',
+    borderRadius: 8,
+    padding: 15,
+  },
   noteBodyTextInput: {
     flex: 1,
-    fontSize: 17,
+    fontSize: 21,
     color: '#fff',
   },
   micIconContainer: {
@@ -143,34 +151,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 8,
     marginBottom: 30,
-  },
-  dialogContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  dialogTitleText: {
-    fontWeight: 'bold',
-    fontSize: 21,
-    color: '#fff',
-    marginTop: 10,
-    marginBottom: 15
-  },
-  dialogDescriptionText: {
-    fontSize: 14,
-    color: '#fff',
-    textAlign: 'center',
-    marginBottom: 15,
-  },
-  dialogButtonContainer: {
-    backgroundColor: '#03A9F4',
-    paddingVertical: 8,
-    paddingHorizontal: 25,
-    borderRadius: 8,
-  },
-  dialogButtonText: {
-    color: '#fff',
-    fontSize: 14,
-  },
+  }
 });
 
 export default styles;
