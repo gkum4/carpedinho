@@ -13,7 +13,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import styles from './styles'
 
-import { timelineData } from '../../data'
 import { useNavigation } from '@react-navigation/native'
 
 import felizIcon from '../../assets/expressions/felizIcon.png';
@@ -50,12 +49,6 @@ const Feeling = ({ route }) => {
                 <Text style={styles.nextButtonText}>Pular</Text>
               </TouchableOpacity>
             </View>
-            <TouchableOpacity
-                    style={styles.skipButton}
-                    onPress={() => {}}
-                  >
-                    <Text style={styles.skipButtonText}>Pular</Text>
-            </TouchableOpacity>
           </View>
 
           <View style={styles.titleContainer}>

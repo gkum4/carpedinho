@@ -14,11 +14,7 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: 'row',
-<<<<<<< HEAD
-    marginBottom: 20,
-=======
     justifyContent:'space-between'
->>>>>>> 462aeb2b6702eb089ea61c674af400cdd64f7217
   },
   titleContainer: {
     justifyContent: 'center',
